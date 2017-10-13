@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<!-- FONTS, BOOTSTRAP, FONT-AWESOME -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 	<script src="https://use.fontawesome.com/7a0beaf8bc.js"></script>
 	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
-	<!-- FONTS -->
-	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Axiom Open Source</title>
 </head>
 <body>
 		<header class="header container-fluid">
-			<div class="col-md-4 nav-logo"> AXIOM
+			<div class="row">
+				<div class="col-md-4 col-sm-4 nav-logo">
+					<a href="#" class="home-link">AXIOM</a>
+				</div>
+				<nav class="col-md-offset-2 col-md-6 col-sm-8 nav-container">
+					<ul class="nav">
+						<li class="nav-item">
+							<a href="#why" class="nav-item-link">Why Axiom?</a>
+						</li>
+						<li class="nav-item">
+							<a href="#demo" class="nav-item-link">Demo</a>
+						</li>
+						<li class="nav-item">
+							<a href="contributor-guide.html" class="nav-item-link">Contributor Guide</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about" class="nav-item-link">About</a>
+						</li>
+				</nav>
 			</div>
-			<nav class="col-md-offset-2 col-md-6 nav-container">
-				<ul class="nav">
-					<li class="nav-item">
-						<a href="#why" class="nav-item-link">Why Axiom?</a>
-					</li>
-					<li class="nav-item">
-						<a href="#demo" class="nav-item-link">Demo</a>
-					</li>
-					<li class="nav-item">
-						<a href="#contributors-guide" class="nav-item-link">Contributors Guide</a>
-					</li>
-					<li class="nav-item">
-						<a href="#about" class="nav-item-link">About</a>
-					</li>
-			</nav>
 		</header>
 		<main>
 			<div class="main-container">
@@ -39,43 +41,74 @@
 					<h1 class="hero-text">AXIOM</h1>
 					<h3 class="hero-sub-text">Functional, Immutable, Awesome</h3>
 				</div>
-				<div class="section why" id="#why">
-					<div class="why-container">
-						<figure class="why-reasons">
-							<img class="why-screenshot " src="" alt="" />
-							<figcaption class="fa fa-user-o">Lorem ipsum dolor sit amet, consectetur adipisicing elit</figcaption>
-						</figure>
-						<figure class="why-reasons">
-							<img class="why-screenshot" src="" alt="" />
-							<figcaption>proident, sunt in culpa qui officia deserunt mollit anim id </figcaption>
-						</figure>
-						<figure class="why-reasons">
-							<img class="why-screenshot" src="" alt="" />
-							<figcaption>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden</figcaption>
-							<i class="fa fa-user-o" aria-hidden="true"></i>
-						</figure>
-						<!--
-						<div class="list">
-							<ul class="why-list">
-								<li>Lorem ipsum dolor sit amet,am consectetur, obcaecati molestias!</li>
-								<li>amco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </li>
-								<li>amco laboris nisi ut aliquip ex ea commodo cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-							</ul>
+				<p class="intro"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio officia tenetur, saepe consequatur blanditiis consectetur deleniti expedita, voluptatum nam voluptates doloribus architecto nostrum, nesciunt omnis, est necessitatibus excepturi deserunt explicabo.
+				</p>
+				<div class="button">Download Axiom</div>
+				<div class="section why" id="why">
+					<div class="why-container container-fluid">
+						<div class="row">
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-user-o icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-handshake-o icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									proident, sunt in culpa qui officia deserunt mollit anim id
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-snowflake-o icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-bathtub icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-child icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									proident, sunt in culpa qui officia deserunt mollit anim id
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-camera-retro icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-rss icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-superpowers icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									proident, sunt in culpa qui officia deserunt mollit anim id
+								</figcaption>
+							</figure>
+							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
+								<i class="fa fa-grav icon" aria-hidden="true"></i>
+								<figcaption class="why-reason-text">
+									reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+								</figcaption>
+							</figure>
 						</div>
-						<div class="why-screenshots">
-							<div class="why-screenshot">
-							</div>
-							<div class="why-screenshot">
-							</div>
-						</div>
-					-->
 					</div>
 				</div>
-				<div class="section demo" id="#demo">
+				<div class="section demo" id="demo">
 					DEMO HERE
 				</div>
-				<div class="section about" id="#about">
+				<div class="section about" id="about">
+					<div class="ai-logo" alt="Advisor Innovation Labs Logo"></div>
 					AI LABS
 				</div>
 			</div>

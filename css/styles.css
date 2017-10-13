@@ -1,45 +1,88 @@
+.contributor-header {
+  position: fixed;
+  width: 100%; }
+
+.contributor-guide-background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/axiom-bw.jpg");
+  background-blend-mode: saturation;
+  background-position: center;
+  opacity: 0.2;
+  position: fixed;
+  z-index: -5; }
+
+.contributor-guide-container {
+  padding: 0; }
+
+.contributor-guide {
+  font-family: Helvetica, serif;
+  padding: 80px 50px; }
+
+.contributor-guide p {
+  font-size: 16px;
+  line-height: 20px; }
+
+.contributor-guide ul,
+.contributor-guide ol {
+  line-height: 20px;
+  font-size: 16px; }
+
+.contributor-guide ul {
+  list-style: none; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: "Alegreya", serif; }
 
 .header {
   height: 50px;
-  background-color: darkgrey; }
+  background-color: darkgrey;
+  line-height: 50px;
+  text-shadow: 1px 1px 2px white; }
+
+.home-link {
+  text-decoration: none;
+  color: black; }
+
+.home-link:hover {
+  color: black;
+  text-decoration: none; }
 
 .nav-logo {
-  width: 80px; }
+  font-size: 50px; }
 
 .nav-container {
   height: 50px;
   display: flex;
-  justify-content: flex-end;
-  width: 600px;
-  background-color: lime; }
+  justify-content: flex-end; }
 
 .nav {
   justify-content: flex-end; }
 
 .nav-item {
   display: inline;
-  padding: 5px 0;
-  width: 100px; }
+  padding: 5px 0; }
 
 .nav-item-link {
-  padding: 0 !important; }
+  color: black;
+  font-size: 18px;
+  line-height: 20px; }
 
 .section {
   border: 1px solid black;
   padding: 5px 0; }
 
 .hero {
-  height: 700px;
-  background-image: url("../img/Axiom_ship.jpg");
-  background-size: cover;
+  height: 660px;
+  background-image: url(../img/Axiom_ship.jpg);
+  background-size: auto;
+  background-position: center;
   text-align: center;
-  color: white;
-  font-family: "Alegreya", serif; }
+  color: white; }
 
 .hero-text {
   margin: 40px 0;
@@ -49,15 +92,28 @@ body {
   margin: 290px 0;
   font-size: 54px; }
 
-.why {
-  height: 700px; }
+.intro {
+  width: 50%;
+  max-width: 500px;
+  margin: 50px auto 20px;
+  font-size: 18px;
+  text-align: center; }
+
+.button {
+  width: 215px;
+  padding: 15px 30px;
+  margin: 20px auto 50px;
+  background-color: #0000f1;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  text-align: center; }
 
 .why-container {
   display: flex; }
 
-.why-list {
-  width: 50%;
-  min-width: 300px; }
+.why-reason {
+  margin: 2em 0; }
 
 .why-screenshots {
   width: 50%;
@@ -68,6 +124,21 @@ body {
   height: 240px;
   background-color: firebrick; }
 
+.icon {
+  margin: 10px;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s; }
+
+.icon:hover {
+  text-shadow: 2px 2px 3px #0000f1; }
+
+.why-reason-text {
+  text-align: center;
+  max-width: 300px;
+  margin: 15px auto; }
+
 .demo {
   height: 700px;
   background-color: white; }
@@ -75,6 +146,14 @@ body {
 .about {
   height: 700px;
   background-color: #2a2a2a; }
+
+.ai-logo {
+  width: 330px;
+  height: 350px;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/ai-labs-logo.png"); }
 
 .footer {
   height: 300px;

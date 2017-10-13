@@ -1,24 +1,33 @@
 @import "variables";
-
+@import "contributor-guide";
 * {
 	box-sizing: border-box;
 }
 body {
 	margin: 0;
+	font-family: "Alegreya", serif;
 }
 .header {
 	height: 50px;
 	background-color: $bg-color;
+	line-height: 50px;
+	text-shadow: 1px 1px 2px white;
+}
+.home-link {
+	text-decoration: none;
+	color: black;
+}
+.home-link:hover {
+	color: black;
+	text-decoration: none;
 }
 .nav-logo {
-	width: 80px;
+	font-size: 50px;
 }
 .nav-container {
 	height: 50px;
 	display: flex;
 	justify-content: flex-end;
-	width: 600px;
-	background-color: lime;
 }
 .nav {
 	justify-content: flex-end;
@@ -26,22 +35,23 @@ body {
 .nav-item {
 	display: inline;
 	padding: 5px 0;
-	width: 100px;
 }
 .nav-item-link {
-	padding: 0 !important;
+	color: black;
+	font-size: 18px;
+	line-height: 20px;
 }
 .section {
 	border: 1px solid black;
 	padding: 5px 0;
 }
 .hero {
-	height: 700px;
-	background-image: url("../img/Axiom_ship.jpg");
-	background-size: cover;
+	height: 660px;
+	background-image: url(../img/Axiom_ship.jpg);
+	background-size: auto;
+	background-position: center;
 	text-align: center;
 	color: white;
-	font-family: "Alegreya", serif;
 }
 .hero-text {
 	margin: 40px 0;
@@ -51,16 +61,32 @@ body {
 	margin: 290px 0;
 	font-size: 54px;
 }
+.intro {
+	width: 50%;
+	max-width: 500px;
+	margin: 50px auto 20px;
+	font-size: 18px;
+	text-align: center;
+}
+.button {
+	width: 215px;
+	padding: 15px 30px;
+	margin: 20px auto 50px;
+	background-color: $theme-color;
+	border-radius: 5px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
 .why {
-	height: 700px;
 }
 .why-container {
 	display: flex;
 }
-.why-list {
-	width: 50%;
-	min-width: 300px;
+.why-reason {
+	margin: 2em 0;
 }
+
 .why-screenshots {
 	width: 50%;
 	min-width: 300px;
@@ -70,6 +96,21 @@ body {
 	height: 240px;
 	background-color: firebrick;
 }
+.icon {
+	margin: 10px;
+	font-size: 100px;
+	width: 100%;
+	text-align: center;
+	transition: 0.5s;
+}
+.icon:hover {
+	text-shadow: 2px 2px 3px $theme-color;
+}
+.why-reason-text {
+	text-align: center;
+	max-width: 300px;
+	margin: 15px auto;
+}
 .demo {
 	height: 700px;
 	background-color: lighten($bg-color, 50%);
@@ -77,6 +118,14 @@ body {
 .about {
 	height: 700px;
 	background-color: darken($bg-color, 50%);
+}
+.ai-logo {
+	width: 330px;
+	height: 350px;
+	margin: 0 auto;
+	background-position: center;
+	background-size: cover;
+	background-image: url("../img/ai-labs-logo.png");
 }
 .footer {
 	height: 300px;
