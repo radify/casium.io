@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 	<script src="https://use.fontawesome.com/7a0beaf8bc.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
@@ -16,21 +17,21 @@
 		<header class="header container-fluid">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 nav-logo">
-					<a href="#" class="home-link">AXIOM</a>
+					<a href="#" class="link-reset">AXIOM</a>
 				</div>
 				<nav class="col-md-offset-2 col-md-6 col-sm-8 nav-container">
 					<ul class="nav">
 						<li class="nav-item">
-							<a href="#why" class="nav-item-link">Why Axiom?</a>
+							<a href="#why" class="nav-link link-reset">Why Axiom?</a>
 						</li>
 						<li class="nav-item">
-							<a href="#demo" class="nav-item-link">Demo</a>
+							<a href="#demo" class="nav-link link-reset">Demo</a>
 						</li>
 						<li class="nav-item">
-							<a href="contributor-guide.html" class="nav-item-link">Contributor Guide</a>
+							<a href="contributor-guide.html" class="nav-link link-reset">Contributor Guide</a>
 						</li>
 						<li class="nav-item">
-							<a href="#about" class="nav-item-link">About</a>
+							<a href="#about" class="nav-link link-reset">About</a>
 						</li>
 				</nav>
 			</div>
@@ -108,21 +109,45 @@
 					DEMO HERE
 				</div>
 				<div class="section about" id="about">
-					<div class="ai-logo" alt="Advisor Innovation Labs Logo"></div>
 					AI LABS
+					<div class="ai-container">
+						<div class="ai-thanks">
+							Special thanks to
+							<span class="ai-text">
+								<a class="link-reset" href="advisorinnovationlabs.com">
+									Advisor Innovation Labs
+								</a>
+							</span>
+							for supporting this open source project
+						</div>
+						<a class="ai-link" href="advisorinnovationlabs.com">
+							<svg class="ai-brand" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.34 611">
+								<title>Logo</title>
+						    <desc>Logo</desc>
+						    <defs></defs>
+								<path class="fill" d="M240.6,208.14,170.27,390h42.53l11.45-31.35h81.23L316.92,390h42.25L289.12,208.14Zm-6,116.94,30.26-83.41,30,83.41Z"></path>
+								<polygon class="fill" points="346.18 208.14 346.18 297.75 383.07 389.96 383.07 208.14 346.18 208.14"></polygon>
+								<path class="fill" d="M517.88,154.5,258.94,5,0,154.5v299L258.94,603,517.88,453.5ZM57.53,452.77,270.74,577.44l-9.45,5.42L57.53,466.72ZM302.77,559.08,57.53,414.45V182.38L291,44.83l208.07,119.6V446.6Z"></path>
+								<polygon class="fill" points="295.06 3.78 281.99 11.32 291.99 17.1 295.06 15.33 546.76 160.65 546.76 451.29 295.06 596.61 290.72 594.1 280.72 599.88 295.06 608.15 556.76 457.06 556.76 154.87 295.06 3.78"></polygon>
+							</svg>
+						</a>
+					</div>
 				</div>
 			</div>
 		</main>
 		<footer class="footer">
 			<ul class="nav">
 				<li>
-					<a href="#why">Why Axiom?</a>
+					<a class="link-reset" href="#why">Why Axiom?</a>
 				</li>
 				<li>
-					<a href="#demo">Demo</a>
+					<a class="link-reset" href="#demo">Demo</a>
 				</li>
 				<li>
-					<a href="#about">About</a>
+					<a class="link-reset" href="contributor-guide.html">Contributor Guide</a>
+				</li>
+				<li>
+					<a class="link-reset" href="#about">About</a>
 				</li>
 			</ul>
 			<div class="contact">
