@@ -1,6 +1,5 @@
 .DS_Store
-sass
-.sass-cache
+.sass-cache/
 
 css/.DS_Store
 img/DS_Store

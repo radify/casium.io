@@ -104,32 +104,48 @@
 
 .nav > .nav-item {
   display: inline;
-  padding: 10px 15px;
   font-size: 18px;
-  line-height: 20px;
-  transition: 0.4s; }
+  line-height: 20px; }
 
 .nav {
   display: flex;
   justify-content: flex-end; }
 
-.nav > li > a {
-  padding: 0; }
+.nav > .nav-item > a,
+#docs {
+  padding: 10px 20px;
+  margin-top: 5px;
+  transition: 0.5s; }
+
+#docs {
+  width: 80px;
+  height: 40px; }
+
+#docs:hover {
+  background-color: #f6f6f6; }
 
 .submenu {
-  display: block;
-  height: 100px;
-  width: 100px;
+  display: none;
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  left: -20px;
+  height: 85px;
+  width: 160px;
   list-style: none;
   background-color: darkgrey;
   padding-left: 10px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  transition: display 1ms opacity 0.5s; }
 
 .submenu-item {
-  padding: 10px 0; }
+  padding: 10px 0;
+  transition: 0.5s; }
 
-#docs:hover .submenu {
-  display: block; }
+#docs:hover .submenu,
+.submenu:hover .submenu {
+  display: block;
+  opacity: 1; }
 
 @media all and (max-width: 800px) {
   .nav {
@@ -223,8 +239,8 @@ body {
   max-width: 630px; }
 
 .intro {
-  width: 50%;
-  max-width: 500px;
+  width: 70%;
+  max-width: 650px;
   margin: 50px auto 20px;
   font-size: 18px;
   text-align: center; }

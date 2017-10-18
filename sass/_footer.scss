@@ -1,0 +1,28 @@
+.footer {
+	height: 150px;
+	background-color: darken($theme-color-2, 80%);
+}
+.nav-footer {
+	display: flex;
+	justify-content: space-around;
+}
+.nav-footer > li {
+	list-style: none;
+	padding: 20px;
+}
+.nav-footer > li > a {
+	padding: 20px;
+	font-size: 25px;
+}
+.nav-footer > li > a:hover {
+	background-color: lighten($theme-color-2, 30%);
+}
+.contact {
+	text-align: center;
+}
+
+@media all and (max-width: 900px) {
+	.nav-footer > li > a {
+		display: none;
+	}
+}

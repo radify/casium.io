@@ -1,0 +1,82 @@
+.contributor-header {
+	position: fixed;
+	width: 100%;
+}
+.contributor-guide-background {
+	width: 100vw;
+	max-width: 1200px;
+	height: 100vh;
+	background-image: url("../img/axiom-bw.jpg");
+	background-blend-mode: saturation;
+	background-position: center;
+	opacity: 0.2;
+	position: fixed;
+	z-index: -5;
+}
+.contributor-guide-container {
+	padding: 0;
+}
+.contributor-guide {
+	font-family: Helvetica, serif;
+	padding: 80px 50px;
+}
+.contributor-guide p {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.contributor-guide ul,
+.contributor-guide ol {
+	line-height: 20px;
+	font-size: 16px;
+}
+.contributor-guide ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+}
+.contributor-guide > ul > li {
+	width: 130px;
+	border: 1px solid black;
+	border-radius: 20px;
+	background-color: lighten($theme-color-2, 30%);
+	margin: 20px;
+	transition: 0.5s;
+}
+.contributor-guide > ul > li:hover {
+	box-shadow: 2px 2px 3px black;
+}
+.external-logo {
+	width: 100px;
+	height: 100px;
+	margin: 15px;
+}
+.php-logo {
+	padding: 3px 0;
+}
+.external-logo-text {
+	text-align: center;
+}
+.repo-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 50px;
+}
+.link-reset > .repo-button {
+	display: inline;
+	margin: 50px;
+}
+@media all and (max-width: 960px) {
+	.link-reset > .repo-button {
+		font-size: 16px;
+		margin: 20px;
+		display: block;
+	}
+}
+@media all and (max-width: 660px) {
+	.link-reset > .repo-button {
+		display: block;
+	}
+}
