@@ -115,6 +115,7 @@
 #docs {
   padding: 10px 20px;
   margin-top: 5px;
+  border-radius: 10px;
   transition: 0.5s; }
 
 #docs {
@@ -164,6 +165,20 @@
 
   .nav > .nav-item {
     display: block; }
+
+  #docs {
+    width: 100%; }
+
+  .nav > .nav-item > a,
+  #docs {
+    margin-top: 0; }
+
+  #docs:hover .submenu {
+    right: 0;
+    left: 150px;
+    top: -40px; }
+  #docs:hover .hamburger-show {
+    right: 160px; }
 
   .nav-container > .hamburger-btn {
     display: block;
