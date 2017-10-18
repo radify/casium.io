@@ -11,27 +11,34 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<title>Axiom Open Source</title>
+	<title>Casium Open Source</title>
 </head>
 <body>
 		<header class="header container-fluid">
 			<div class="row">
-				<div class="col-md-4 col-sm-4 nav-logo">
-					<a href="#" class="link-reset">AXIOM</a>
+				<div class="col-md-4 col-sm-4 col-xs-4 nav-logo">
+					<a href="#" class="link-reset">Casium</a>
 				</div>
-				<nav class="col-md-offset-2 col-md-6 col-sm-8 nav-container">
+				<nav class="col-md-offset-2 col-md-6 col-sm-8 col-xs-8 nav-container">
+					<div class="hamburger-btn">
+						<span class="hamburger-btn-open hamburger-btn-show">☰</span>
+						<span class="hamburger-btn-close">&#10005</span>
+					</div>
 					<ul class="nav">
-						<li class="nav-item">
-							<a href="#why" class="nav-link link-reset">Why Axiom?</a>
+						<li class="nav-item" id="docs">
+							Docs
+							<ul class="submenu">
+								<li class="submenu-item">Book</li>
+								<li class="submenu-item">
+									<a class="link-reset" href="https://github.com/ai-labs-team/architecture">ReadMe.md</a>
+								</li>
+							</ul>
 						</li>
 						<li class="nav-item">
-							<a href="#demo" class="nav-link link-reset">Demo</a>
+							<a href="contributor-guide.html" class="nav-item link-reset">Get Involved!</a>
 						</li>
 						<li class="nav-item">
-							<a href="contributor-guide.html" class="nav-link link-reset">Contributor Guide</a>
-						</li>
-						<li class="nav-item">
-							<a href="#about" class="nav-link link-reset">About</a>
+							<a href="#about" class="nav-item link-reset">About</a>
 						</li>
 				</nav>
 			</div>
@@ -39,13 +46,17 @@
 		<main>
 			<div class="main-container">
 				<div class="section hero">
-					<h1 class="hero-text">AXIOM</h1>
-					<h3 class="hero-sub-text">Functional, Immutable, Awesome</h3>
+					<h1 class="hero-text">Casium</h1>
+					<h3 class="hero-sub-text">Reliable and Predictable React Applications</h3>
 				</div>
-				<p class="intro"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio officia tenetur, saepe consequatur blanditiis consectetur deleniti expedita, voluptatum nam voluptates doloribus architecto nostrum, nesciunt omnis, est necessitatibus excepturi deserunt explicabo.
+				<p class="intro"> The Casium Front-End Architecture is a data and effects management system that helps you manage the complexity of large React applications reliabily and predictably.
 				</p>
-				<div class="button">Download Axiom</div>
-				<div class="section why" id="why">
+				<p class="intro">It does this by modeling the state of your application (yes, all of it) as a single, immutable value, and handling side-effects in application logic with messages. If this reminds you of Redux, that might be because both are derived from The Elm Architecture. However, this library attempts to hew more closely to Elm's design in order to gain more of Elm's advantages, and to provide a better, more cohesive developer experience.
+				</p>
+				<a href="https://github.com/ai-labs-team/architecture" class="download link-reset">
+					<div class="button">Download Casium</div>
+				</a>
+				<div class="section why">
 					<div class="why-container container-fluid">
 						<div class="row">
 							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
@@ -61,13 +72,13 @@
 								</figcaption>
 							</figure>
 							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
-								<i class="fa fa-snowflake-o icon" aria-hidden="true"></i>
+								<i class="fa fa-envelope-square icon" aria-hidden="true"></i>
 								<figcaption class="why-reason-text">
 									reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden
 								</figcaption>
 							</figure>
 							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
-								<i class="fa fa-bathtub icon" aria-hidden="true"></i>
+								<i class="fa fa-exchange icon" aria-hidden="true"></i>
 								<figcaption class="why-reason-text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit
 								</figcaption>
@@ -79,13 +90,13 @@
 								</figcaption>
 							</figure>
 							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
-								<i class="fa fa-camera-retro icon" aria-hidden="true"></i>
+								<i class="fa fa-question-circle icon" aria-hidden="true"></i>
 								<figcaption class="why-reason-text">
 									reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden
 								</figcaption>
 							</figure>
 							<figure class="why-reason col-md-4 col-sm-6 col-xs-12">
-								<i class="fa fa-rss icon" aria-hidden="true"></i>
+								<i class="fa fa-thumbs-o-down icon" aria-hidden="true"></i>
 								<figcaption class="why-reason-text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit
 								</figcaption>
@@ -105,30 +116,34 @@
 						</div>
 					</div>
 				</div>
-				<div class="section demo" id="demo">
-					DEMO HERE
+				<div class="section demo">
+					<p class="readme"></p>
+					Place sections
+					from
+					ReadMe here
 				</div>
-				<div class="section about" id="about">
+				<div id="about"></div>
+				<div class="section about">
 					AI LABS
-					<div class="ai-container">
-						<div class="ai-thanks">
+					<div class="ai-container ai">
+						<div class="ai-thanks ai">
 							Special thanks to
-							<span class="ai-text">
-								<a class="link-reset" href="advisorinnovationlabs.com">
+							<span class="ai-text ai">
+								<a class="link-reset ai" href="advisorinnovationlabs.com">
 									Advisor Innovation Labs
 								</a>
 							</span>
 							for supporting this open source project
 						</div>
-						<a class="ai-link" href="advisorinnovationlabs.com">
-							<svg class="ai-brand" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.34 611">
+						<a class="ai-link ai" href="advisorinnovationlabs.com">
+							<svg class="ai-brand ai" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.34 611">
 								<title>Logo</title>
 						    <desc>Logo</desc>
 						    <defs></defs>
-								<path class="fill" d="M240.6,208.14,170.27,390h42.53l11.45-31.35h81.23L316.92,390h42.25L289.12,208.14Zm-6,116.94,30.26-83.41,30,83.41Z"></path>
-								<polygon class="fill" points="346.18 208.14 346.18 297.75 383.07 389.96 383.07 208.14 346.18 208.14"></polygon>
-								<path class="fill" d="M517.88,154.5,258.94,5,0,154.5v299L258.94,603,517.88,453.5ZM57.53,452.77,270.74,577.44l-9.45,5.42L57.53,466.72ZM302.77,559.08,57.53,414.45V182.38L291,44.83l208.07,119.6V446.6Z"></path>
-								<polygon class="fill" points="295.06 3.78 281.99 11.32 291.99 17.1 295.06 15.33 546.76 160.65 546.76 451.29 295.06 596.61 290.72 594.1 280.72 599.88 295.06 608.15 556.76 457.06 556.76 154.87 295.06 3.78"></polygon>
+								<path class="fill ai" d="M240.6,208.14,170.27,390h42.53l11.45-31.35h81.23L316.92,390h42.25L289.12,208.14Zm-6,116.94,30.26-83.41,30,83.41Z"></path>
+								<polygon class="fill ai" points="346.18 208.14 346.18 297.75 383.07 389.96 383.07 208.14 346.18 208.14"></polygon>
+								<path class="fill ai" d="M517.88,154.5,258.94,5,0,154.5v299L258.94,603,517.88,453.5ZM57.53,452.77,270.74,577.44l-9.45,5.42L57.53,466.72ZM302.77,559.08,57.53,414.45V182.38L291,44.83l208.07,119.6V446.6Z"></path>
+								<polygon class="fill ai" points="295.06 3.78 281.99 11.32 291.99 17.1 295.06 15.33 546.76 160.65 546.76 451.29 295.06 596.61 290.72 594.1 280.72 599.88 295.06 608.15 556.76 457.06 556.76 154.87 295.06 3.78"></polygon>
 							</svg>
 						</a>
 					</div>
@@ -136,10 +151,7 @@
 			</div>
 		</main>
 		<footer class="footer">
-			<ul class="nav">
-				<li>
-					<a class="link-reset" href="#why">Why Axiom?</a>
-				</li>
+			<ul class="nav-footer">
 				<li>
 					<a class="link-reset" href="#demo">Demo</a>
 				</li>
@@ -151,7 +163,7 @@
 				</li>
 			</ul>
 			<div class="contact">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				Contact us at....
 			</div>
 
 		</footer>

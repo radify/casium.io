@@ -4,6 +4,7 @@
 
 .contributor-guide-background {
   width: 100vw;
+  max-width: 1200px;
   height: 100vh;
   background-image: url("../img/axiom-bw.jpg");
   background-blend-mode: saturation;
@@ -29,13 +30,57 @@
   font-size: 16px; }
 
 .contributor-guide ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none; }
 
+.contributor-guide > ul > li {
+  width: 130px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  margin: 20px;
+  transition: 0.5s; }
+
+.contributor-guide > ul > li:hover {
+  box-shadow: 2px 2px 3px black; }
+
+.external-logo {
+  width: 100px;
+  height: 100px;
+  margin: 15px; }
+
+.php-logo {
+  padding: 3px 0; }
+
+.external-logo-text {
+  text-align: center; }
+
+.repo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 50px; }
+
+.link-reset > .repo-button {
+  display: inline;
+  margin: 50px; }
+
+@media all and (max-width: 960px) {
+  .link-reset > .repo-button {
+    font-size: 16px;
+    margin: 20px;
+    display: block; } }
+@media all and (max-width: 660px) {
+  .link-reset > .repo-button {
+    display: block; } }
 .header {
   position: fixed;
   top: 0px;
   z-index: 10;
   width: 100%;
+  max-width: 1200px;
   height: 50px;
   background-color: darkgrey;
   line-height: 50px;
@@ -43,7 +88,7 @@
   color: black;
   transition: top 0.5s; }
 
-.hide {
+.slideOff {
   top: -50px; }
 
 .nav-logo {
@@ -54,17 +99,101 @@
   display: flex;
   justify-content: flex-end; }
 
+.nav-container > .hamburger-btn {
+  display: none; }
+
+.nav > .nav-item {
+  display: inline;
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  transition: 0.4s; }
+
 .nav {
+  display: flex;
   justify-content: flex-end; }
 
-.nav-item {
-  display: inline;
-  padding: 5px 0; }
+.nav > li > a {
+  padding: 0; }
 
-.nav-link {
-  font-size: 18px;
-  line-height: 20px; }
+.submenu {
+  display: block;
+  height: 100px;
+  width: 100px;
+  list-style: none;
+  background-color: darkgrey;
+  padding-left: 10px;
+  margin-top: 20px; }
 
+.submenu-item {
+  padding: 10px 0; }
+
+#docs:hover .submenu {
+  display: block; }
+
+@media all and (max-width: 800px) {
+  .nav {
+    display: block;
+    width: 175px;
+    background-color: darkgrey;
+    position: fixed;
+    right: -200px;
+    top: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: 1s; }
+
+  .hamburger-show {
+    right: 0; }
+
+  .nav > .nav-item {
+    display: block; }
+
+  .nav-container > .hamburger-btn {
+    display: block;
+    padding: 0 20px;
+    font-size: 25px; }
+
+  .nav-container > .hamburger-btn:hover {
+    background-color: #f6f6f6; }
+
+  .hamburger-btn-open,
+  .hamburger-btn-close {
+    position: fixed;
+    right: 24px;
+    opacity: 0;
+    transition: 0.5s; }
+
+  .hamburger-btn-close {
+    font-size: 27px; }
+
+  .hamburger-btn-show {
+    opacity: 1; } }
+.footer {
+  height: 150px;
+  background-color: black; }
+
+.nav-footer {
+  display: flex;
+  justify-content: space-around; }
+
+.nav-footer > li {
+  list-style: none;
+  padding: 20px; }
+
+.nav-footer > li > a {
+  padding: 20px;
+  font-size: 25px; }
+
+.nav-footer > li > a:hover {
+  background-color: #f6f6f6; }
+
+.contact {
+  text-align: center; }
+
+@media all and (max-width: 900px) {
+  .nav-footer > li > a {
+    display: none; } }
 * {
   box-sizing: border-box; }
 
@@ -85,12 +214,13 @@ body {
   color: white; }
 
 .hero-text {
-  margin: 40px 0;
-  font-size: 140px; }
+  margin: 60px 0;
+  font-size: 120px; }
 
 .hero-sub-text {
-  margin: 290px 0;
-  font-size: 54px; }
+  margin: 290px auto;
+  font-size: 54px;
+  max-width: 630px; }
 
 .intro {
   width: 50%;
@@ -121,7 +251,9 @@ body {
   display: flex; }
 
 .why-reason {
-  margin: 2em 0; }
+  margin: 2em 0;
+  opacity: 0;
+  transition: 1s; }
 
 .why-screenshots {
   width: 50%;
@@ -145,7 +277,8 @@ body {
 .why-reason-text {
   text-align: center;
   max-width: 300px;
-  margin: 15px auto; }
+  margin: 15px auto;
+  min-height: 60px; }
 
 .demo {
   background-color: white;
@@ -154,7 +287,6 @@ body {
   margin: 200px; }
 
 .about {
-  height: 700px;
   background-color: #2a2a2a; }
 
 .ai-container {
@@ -162,9 +294,10 @@ body {
   color: white; }
 
 .ai-thanks {
-  width: 60%;
+  width: 60vw;
+  min-width: 290px;
   font-size: 30px;
-  margin: 100px 20% 0; }
+  margin: 100px auto 0; }
 
 .ai-text {
   width: 100%;
@@ -178,17 +311,5 @@ body {
 
 .fill {
   fill: white; }
-
-.footer {
-  height: 300px;
-  background-color: black; }
-
-.nav-footer {
-  display: flex;
-  justify-content: flex-start; }
-
-.nav {
-  display: flex;
-  justify-content: flex-start; }
 
 /*# sourceMappingURL=styles.css.map */

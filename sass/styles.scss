@@ -1,6 +1,7 @@
 @import "variables";
 @import "contributor-guide";
 @import "header";
+@import "footer";
 
 * {
 	box-sizing: border-box;
@@ -23,12 +24,13 @@ body {
 	color: white;
 }
 .hero-text {
-	margin: 40px 0;
-	font-size: 140px;
+	margin: 60px 0;
+	font-size: 120px;
 }
 .hero-sub-text {
-	margin: 290px 0;
+	margin: 290px auto;
 	font-size: 54px;
+	max-width: 630px;
 }
 .intro {
 	width: 50%;
@@ -62,6 +64,8 @@ body {
 }
 .why-reason {
 	margin: 2em 0;
+	opacity: 0;
+	transition: 1s;
 }
 
 .why-screenshots {
@@ -89,6 +93,7 @@ body {
 	text-align: center;
 	max-width: 300px;
 	margin: 15px auto;
+	min-height: 60px;
 }
 .demo {
 	background-color: lighten($theme-color-2, 50%);
@@ -97,7 +102,6 @@ body {
 	margin: 200px;
 }
 .about {
-	height: 700px;
 	background-color: darken($theme-color-2, 50%);
 }
 .ai-container {
@@ -105,9 +109,10 @@ body {
 	color: white;
 }
 .ai-thanks {
-	width: 60%;
+	width: 60vw;
+	min-width: 290px;
 	font-size: 30px;
-	margin: 100px 20% 0;
+	margin: 100px auto 0;
 }
 .ai-text {
 	width: 100%;
@@ -123,16 +128,4 @@ body {
 }
 .fill {
 	fill: white;
-}
-.footer {
-	height: 300px;
-	background-color: darken($theme-color-2, 80%);
-}
-.nav-footer {
-	display: flex;
-	justify-content: flex-start;
-}
-.nav {
-	display: flex;
-	justify-content: flex-start;
 }
