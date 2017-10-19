@@ -102,7 +102,7 @@ body {
 .why-reason {
 	display: flex;
 	justify-content: space-evenly;
-	margin: 5px 0;
+	margin: 20px 0;
 	opacity: 0;
 	transition: 1s;
 }
@@ -129,8 +129,8 @@ body {
 }
 .why-reason-text {
 	text-align: left;
-	max-width: 300px;
-	min-height: 90px;
+	width: 300px;
+	min-height: 65px;
 	display: inline-block;
 	vertical-align: top;
 }
