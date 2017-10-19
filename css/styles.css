@@ -234,10 +234,6 @@ body {
   font-family: "Alegreya", serif;
   max-width: 1200px; }
 
-.flex {
-  display: flex;
-  justify-content: space-around; }
-
 .cls-1 {
   fill: #2e3192; }
 
@@ -255,33 +251,32 @@ body {
 
 .hero {
   height: 660px;
-  background-color: teal;
-  text-align: center;
+  background-color: lightgrey;
+  text-align: left;
   color: white; }
 
 .casium-logo {
   display: block;
   width: 300px;
-  margin: 90px auto; }
+  margin: 90px 0 30px 42px; }
+
+.hero-text-container {
+  margin-left: 150px; }
 
 .hero-text {
   margin: 150px 0 50px;
   font-size: 120px; }
 
-.hero-sub-text {
-  margin: 10px auto;
-  font-size: 39px;
-  max-width: 850px; }
-
 .hero-sub-text-sm {
   font-size: 18px; }
 
-.hero-button-container {
-  display: flex;
-  justify-content: center; }
+.hero-sub-text {
+  margin: 10px 0;
+  font-size: 39px;
+  max-width: 850px; }
 
-.hero-link {
-  margin: 20px; }
+.hero-button-container {
+  justify-content: flex-start; }
 
 .intro {
   width: 70%;
@@ -294,16 +289,15 @@ body {
   width: 215px;
   padding: 15px 30px;
   margin: 50px auto 60px;
-  background-color: teal;
+  background-color: white;
   border-radius: 5px;
-  color: white;
+  color: teal;
   font-size: 20px;
   text-align: center; }
 
-.button-inverse {
-  background-color: white;
-  color: teal;
-  margin: 0; }
+.hero-button {
+  display: inline-block;
+  margin: 20px 20px 0 0; }
 
 .link-reset,
 .link-reset:hover,
@@ -348,32 +342,36 @@ body {
 
 .demo {
   background-color: white;
-  font-size: 100px;
+  font-size: 40px;
   text-align: center;
-  margin: 200px; }
+  margin: 50px 0; }
 
-.about {
-  background-color: #2a2a2a; }
-
-.ai-container {
-  text-align: center;
-  color: white; }
-
-.ai-thanks {
-  width: 60vw;
-  min-width: 290px;
-  font-size: 30px;
-  margin: 100px auto 0; }
-
-.ai-text {
+.redux-comparison {
+  background-color: darkgrey;
+  margin: 0 auto;
   width: 100%;
-  display: block;
-  font-size: 50px; }
+  max-width: 800px; }
 
-.ai-brand {
-  height: 200px;
-  width: 200px;
-  margin: 50px auto; }
+.comparison-btn {
+  display: none;
+  margin: 50px auto 0;
+  cursor: pointer; }
+
+.comparison-btn-container {
+  padding-top: 10px; }
+
+.redux-example {
+  display: none;
+  width: 800px;
+  height: 550px; }
+
+.casium-example {
+  display: none;
+  width: 800px;
+  height: 550px; }
+
+.block {
+  display: block; }
 
 .fill {
   fill: white; }
