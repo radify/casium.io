@@ -119,7 +119,7 @@
   transition: 0.5s; }
 
 #docs {
-  width: 80px;
+  width: 157px;
   height: 40px; }
 
 #docs:hover {
@@ -233,25 +233,54 @@ body {
   font-family: "Alegreya", serif;
   max-width: 1200px; }
 
+.flex {
+  display: flex;
+  justify-content: space-around; }
+
+.cls-1 {
+  fill: #2e3192; }
+
+.cls-2 {
+  fill: #00a651; }
+
+.cls-3 {
+  fill: #00aeef; }
+
+.cls-4 {
+  fill: #ec008c; }
+
 .section {
   padding: 5px 0; }
 
 .hero {
   height: 660px;
-  background-image: url(../img/Axiom_ship.jpg);
-  background-size: auto;
-  background-position: center;
+  background-color: teal;
   text-align: center;
   color: white; }
 
+.casium-logo {
+  display: block;
+  width: 300px;
+  margin: 90px auto; }
+
 .hero-text {
-  margin: 60px 0;
+  margin: 150px 0 50px;
   font-size: 120px; }
 
 .hero-sub-text {
-  margin: 290px auto;
-  font-size: 54px;
-  max-width: 630px; }
+  margin: 10px auto;
+  font-size: 39px;
+  max-width: 850px; }
+
+.hero-sub-text-sm {
+  font-size: 18px; }
+
+.hero-button-container {
+  display: flex;
+  justify-content: center; }
+
+.hero-link {
+  margin: 20px; }
 
 .intro {
   width: 70%;
@@ -264,17 +293,20 @@ body {
   width: 215px;
   padding: 15px 30px;
   margin: 50px auto 60px;
-  background-color: #0000f1;
+  background-color: teal;
   border-radius: 5px;
   color: white;
   font-size: 20px;
   text-align: center; }
 
-.link-reset {
-  text-decoration: none;
-  color: inherit; }
+.button-inverse {
+  background-color: white;
+  color: teal;
+  margin: 0; }
 
-.link-reset:hover {
+.link-reset,
+.link-reset:hover,
+.link-reset::after {
   text-decoration: none;
   color: inherit; }
 
@@ -282,7 +314,9 @@ body {
   display: flex; }
 
 .why-reason {
-  margin: 2em 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px 0;
   opacity: 0;
   transition: 1s; }
 
@@ -297,19 +331,19 @@ body {
 
 .icon {
   margin: 10px;
-  font-size: 100px;
-  width: 100%;
+  font-size: 50px;
   text-align: center;
   transition: 0.5s; }
 
 .why-reason:hover .icon {
-  text-shadow: 2px 2px 3px #0000f1; }
+  text-shadow: 2px 2px 3px teal; }
 
 .why-reason-text {
-  text-align: center;
+  text-align: left;
   max-width: 300px;
-  margin: 15px auto;
-  min-height: 60px; }
+  min-height: 90px;
+  display: inline-block;
+  vertical-align: top; }
 
 .demo {
   background-color: white;
