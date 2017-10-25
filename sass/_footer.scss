@@ -1,28 +1,42 @@
 .footer {
-	height: 150px;
-	background-color: darken($theme-color-2, 80%);
+  padding: 10px;
+  background-color: $theme-color;
 }
 .nav-footer {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .nav-footer > li {
-	list-style: none;
-	padding: 20px;
+  list-style: none;
+  margin: 10px 0;
 }
 .nav-footer > li > a {
-	padding: 20px;
-	font-size: 25px;
+  padding: 10px;
+  font-size: 25px;
 }
 .nav-footer > li > a:hover {
-	background-color: lighten($theme-color-2, 30%);
+  color: $theme-color-3;
+}
+.footer-logo {
+  background-color: lighten($theme-color-2, 30%);
+  background-image: url(../img/casium-logo/casium_logo_mdpi.png);
+  background-size: contain;
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
 }
 .contact {
-	text-align: center;
+  text-align: center;
+  font-size: 20px;
 }
 
-@media all and (max-width: 900px) {
-	.nav-footer > li > a {
-		display: none;
-	}
+@media all and (max-width: 800px) {
+  .nav-footer > li > a {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 550px) {
+  .nav-footer > li > a {
+    display: none;
+  }
 }

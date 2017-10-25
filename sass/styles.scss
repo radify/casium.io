@@ -1,153 +1,157 @@
-@import "variables";
-@import "contributor-guide";
-@import "header";
-@import "footer";
+@import 'variables';
+@import 'contributor-guide';
+@import 'header';
+@import 'footer';
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 // @font-face {
 // 	font-family: "shree714";
 // 	src: url("../Shree714.ttc") format("ttc");
 // }
 body {
-	margin: 0 auto;
-	font-family: "Alegreya", serif;
-	// font-family: "shree714";
-	max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Alegreya', serif;
+  // font-family: "shree714";
+  max-width: 1200px;
 }
 
 .cls-1 {
-	fill: #2e3192;
+  fill: #2e3192;
 }
 .cls-2 {
-	fill: #00a651;
+  fill: #00a651;
 }
 .cls-3 {
-	fill: #00aeef;
+  fill: #00aeef;
 }
 .cls-4 {
-	fill: #ec008c;
+  fill: #ec008c;
 }
 
 .section {
-	padding: 5px 0;
+  padding: 5px 0;
 }
 .hero {
-	height: 660px;
-	background-color: $theme-color;
-	text-align: left;
-	color: white;
+  padding: 20px;
+  background-color: $theme-color;
+  text-align: left;
+  color: black;
 }
 .casium-logo {
-	display: block;
-	width: 300px;
-	margin: 90px 0 30px 42px;
+  display: block;
+  width: 300px;
+  margin: 90px 0 30px 42px;
 }
 .hero-text-container {
-	margin-left: 150px;
+  margin-left: 150px;
 }
 .hero-text {
-	margin: 150px 0 50px;
-	font-size: 120px;
+  margin: 150px 0 50px;
+  font-size: 120px;
 }
 .hero-sub-text-sm {
-	font-size: 18px;
+  font-size: 18px;
 }
 .hero-sub-text {
-	margin: 10px 0;
-	font-size: 39px;
-	max-width: 850px;
-}
-.hero-button-container {
-	justify-content: flex-start;
+  margin: 10px 0;
+  font-size: 39px;
+  max-width: 850px;
 }
 .intro {
-	width: 70%;
-	max-width: 650px;
-	margin: 50px auto 20px;
-	font-size: 18px;
-	text-align: center;
+  width: 70%;
+  max-width: 650px;
+  margin: 50px auto 20px;
+  font-size: 18px;
+  text-align: center;
 }
 .button {
-	width: 215px;
-	padding: 15px 30px;
-	margin: 50px auto 60px;
-	background-color: white;
-	border-radius: 5px;
-	color: $theme-color-3;
-	font-size: 20px;
-	text-align: center;
+  width: 215px;
+  padding: 15px 30px;
+  margin: 50px auto 60px;
+  background-color: white;
+  border-radius: 5px;
+  color: $theme-color-3;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.button:hover {
+  box-shadow: 2px 2px 15px $theme-color-3;
 }
 .hero-button {
-	display: inline-block;
-	margin: 20px 20px 0 0;
+  display: inline-block;
+  margin: 20px 20px 0 0;
 }
 .link-reset,
 .link-reset:hover,
 .link-reset::after {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 .why {
 }
 .why-container {
-	display: flex;
+  display: flex;
 }
 .why-reason {
-	display: flex;
-	justify-content: space-evenly;
-	margin: 20px 0;
-	opacity: 0;
-	transition: 1s;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  margin: 20px 0;
+  opacity: 0;
+  transition: 1s;
 }
 
 .why-screenshots {
-	width: 50%;
-	min-width: 300px;
+  width: 50%;
+  min-width: 300px;
 }
 .why-screenshot {
-	width: 300px;
-	height: 240px;
-	background-color: firebrick;
+  width: 300px;
+  height: 240px;
+  background-color: firebrick;
 }
 .icon {
-	margin: 10px;
-	font-size: 50px;
-	text-align: center;
-	transition: 0.5s;
+  margin: 10px;
+  font-size: 90px;
+  text-align: center;
+  transition: 0.5s;
 }
-.why-reason:hover {
-	.icon {
-		text-shadow: 2px 2px 3px $theme-color-3;
-	}
+.why-reason:hover,
+.advantage:hover {
+  .icon {
+    text-shadow: 2px 2px 3px $theme-color-3;
+  }
 }
 .why-reason-text {
-	text-align: left;
-	width: 300px;
-	min-height: 65px;
-	display: inline-block;
-	vertical-align: top;
+  text-align: left;
+  width: 300px;
+  min-height: 65px;
+  display: inline-block;
+  vertical-align: top;
 }
 .demo {
-	background-color: lighten($theme-color-2, 50%);
-	font-size: 40px;
-	text-align: center;
-	margin: 50px 0;
+  background-color: lighten($theme-color-2, 50%);
+  font-size: 40px;
+  text-align: center;
+  margin: 50px 0;
 }
 .redux-comparison {
-	background-color: $theme-color-2;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 800px;
+  background-color: $theme-color-2;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
 }
 .comparison-btn {
-	display: none;
-	margin: 50px auto 0;
-	cursor: pointer;
+  display: none;
+  margin: 20px auto 0;
+  cursor: pointer;
 }
 .comparison-btn-container {
-	padding-top: 10px;
+  padding-top: 10px;
 }
 // .redux-btn {
 // 	display: none;
@@ -156,18 +160,66 @@ body {
 // 	display: none;
 // }
 .redux-example {
-	display: none;
-	width: 800px;
-	height: 550px;
+  display: none;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 687px;
 }
 .casium-example {
-	display: none;
-	width: 800px;
-	height: 550px;
+  display: none;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 687px;
 }
 .block {
-	display: block;
+  display: block;
 }
 .fill {
-	fill: white;
+  fill: white;
+}
+
+.advantages-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.advantages-title {
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+}
+.advantage {
+  width: 40%;
+  max-width: 500px;
+  margin: 20px;
+}
+.advantage-icon {
+  font-size: 50px;
+}
+.advantage-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.advantage-text {
+  font-size: 16px;
+}
+
+@media all and (max-width: 900px) {
+  .casium-logo {
+    margin: 100px auto 30px;
+  }
+  .hero-text-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .hero-sub-text {
+    font-size: 30px;
+  }
+  .hero-button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
