@@ -1,0 +1,48 @@
+.hero {
+  background-color: $theme-color;
+  text-align: left;
+  color: black;
+  padding: 5px 0 20px;
+}
+.casium-logo {
+  display: block;
+  width: 300px;
+  margin: 90px 0 30px 42px;
+}
+.hero-text-container {
+  margin-left: 150px;
+}
+.hero-text {
+  margin: 150px 0 50px;
+  font-size: 120px;
+}
+.hero-sub-text-sm {
+  font-size: 18px;
+}
+.hero-sub-text {
+  margin: 0;
+  font-size: 39px;
+  max-width: 850px;
+}
+.hero-button {
+  display: inline-block;
+  margin: 20px 20px 0 0;
+}
+
+@media all and (max-width: 900px) {
+  .casium-logo {
+    margin: 100px auto 30px;
+  }
+  .hero-text-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .hero-sub-text {
+    font-size: 30px;
+  }
+  .hero-button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
