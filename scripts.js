@@ -33,6 +33,8 @@ hamburgerBtn.click(function() {
   hamburgerBtnClose.toggleClass('hamburger-btn-show');
 });
 
+
+//issue with large screen these don't show soon enough
 var header = $('.header');
 var lastScrollY = 0;
 function toggleNav(currentScrollY) {
