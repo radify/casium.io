@@ -1,3 +1,7 @@
+/*
+*	casium/redux comparison images
+**/
+
 var comparisonBtnContainer = $('.comparison-btn-container');
 var reduxExample = $('.redux-example');
 var casiumExample = $('.casium-example');
@@ -10,6 +14,10 @@ comparisonBtnContainer.click(() => {
   casiumBtn.toggleClass('block');
 });
 
+/*
+*	fading in of elements on scroll
+**/
+
 var whyReasons = document.getElementsByClassName('why-reason');
 window.addEventListener('scroll', function(e) {
   toggleNav(window.scrollY);
@@ -18,11 +26,16 @@ window.addEventListener('scroll', function(e) {
 function fadeElementsIn() {
   [].forEach.call(whyReasons, (reason, index) => {
     var reasonBounds = reason.getBoundingClientRect();
-    if (window.scrollY > reasonBounds.bottom) {
+		var adjustedScrollPosition = 0.3 * $(window).height() + window.scrollY;
+    if (adjustedScrollPosition > reasonBounds.bottom || $(window).height() > 900) {
       whyReasons[index].style.opacity = 1;
     }
   });
 }
+
+/*
+*	hamburger menu control
+**/
 
 var hamburgerBtn = $('.hamburger-btn');
 var hamburgerBtnOpen = $('.hamburger-btn-open');
@@ -33,8 +46,10 @@ hamburgerBtn.click(function() {
   hamburgerBtnClose.toggleClass('hamburger-btn-show');
 });
 
+/*
+*	header show/hide
+**/
 
-//issue with large screen these don't show soon enough
 var header = $('.header');
 var lastScrollY = 0;
 function toggleNav(currentScrollY) {
@@ -45,6 +60,10 @@ function toggleNav(currentScrollY) {
   }
   lastScrollY = currentScrollY;
 }
+
+/*
+*	link arrows jump and return
+**/
 
 var advantageLinks = document.getElementsByClassName('advantage-link');
 var advantageLinkIcons = document.getElementsByClassName('link-icon');
