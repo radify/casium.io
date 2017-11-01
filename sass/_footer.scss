@@ -1,27 +1,26 @@
 .footer {
+  display: flex;
+  justify-content: flex-start;
   padding: 10px;
   background-color: $theme-color;
 }
 .nav-footer {
-  display: flex;
-  justify-content: space-around;
+  display: inline-block;
 }
 .nav-footer > li {
   list-style: none;
-  margin: 10px 0;
 }
 .nav-footer > li > a {
   padding: 10px;
-  font-size: 25px;
+  font-size: 18px;
 }
 .nav-footer > li > a:hover {
   color: $theme-color-3;
 }
 .footer-logo {
-  background-color: lighten($theme-color-2, 30%);
+  background-color: rgba(255, 255, 255, 0);
   background-image: url(../img/casium-logo/casium_logo_mdpi.png);
   background-size: contain;
-  margin: 0 auto;
   width: 200px;
   height: 100px;
 }
@@ -32,7 +31,7 @@
 
 @media all and (max-width: 800px) {
   .nav-footer > li > a {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 @media all and (max-width: 550px) {

@@ -7,11 +7,17 @@ var reduxExample = $('.redux-example');
 var casiumExample = $('.casium-example');
 var reduxBtn = $('.redux-btn');
 var casiumBtn = $('.casium-btn');
-comparisonBtnContainer.click(() => {
-  reduxExample.toggleClass('block');
-  casiumExample.toggleClass('block');
-  reduxBtn.toggleClass('block');
-  casiumBtn.toggleClass('block');
+reduxBtn.click(()=>{
+  reduxExample.addClass('block');
+  casiumExample.removeClass('block');
+  reduxBtn.addClass('btn-focus');
+  casiumBtn.removeClass('btn-focus');
+})
+casiumBtn.click(() => {
+  reduxExample.removeClass('block');
+  casiumExample.addClass('block');
+  reduxBtn.removeClass('btn-focus');
+  casiumBtn.addClass('btn-focus');
 });
 
 /*
@@ -61,17 +67,18 @@ function toggleNav(currentScrollY) {
   lastScrollY = currentScrollY;
 }
 
-/*
-*	link arrows jump and return
-**/
+// removed until we have content
+// /*
+// *	link arrows jump and return
+// **/
 
-var advantageLinks = document.getElementsByClassName('advantage-link');
-var advantageLinkIcons = document.getElementsByClassName('link-icon');
-(function arrowSlide(){
-	[].forEach.call(advantageLinks, (link, index) => {
-		link.addEventListener("mouseover", () => {
-			advantageLinkIcons[index].classList.add("link-icon-slide")
-			setTimeout(() => {advantageLinkIcons[index].classList.remove("link-icon-slide")}, 1000)
-		})
-	})
-})();
+// var advantageLinks = document.getElementsByClassName('advantage-link');
+// var advantageLinkIcons = document.getElementsByClassName('link-icon');
+// (function arrowSlide(){
+// 	[].forEach.call(advantageLinks, (link, index) => {
+// 		link.addEventListener("mouseover", () => {
+// 			advantageLinkIcons[index].classList.add("link-icon-slide")
+// 			setTimeout(() => {advantageLinkIcons[index].classList.remove("link-icon-slide")}, 1000)
+// 		})
+// 	})
+// })();

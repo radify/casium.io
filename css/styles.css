@@ -33,14 +33,13 @@ body {
   padding: 15px 30px;
   margin: 50px auto 60px;
   background-color: white;
-  border-radius: 5px;
   color: teal;
   font-size: 20px;
   text-align: center;
-  transition: all 0.5s; }
+  transition: all 0.2s; }
 
 .button:hover {
-  box-shadow: 2px 2px 15px teal; }
+  box-shadow: 4px 4px 0px teal; }
 
 .link-reset,
 .link-reset:hover,
@@ -61,14 +60,14 @@ body {
   margin: 20px 0;
   padding: 5px;
   opacity: 0;
-  transition: 1s; }
+  transition: text-shadow 0.5s, opacity 1s; }
 
 .icon {
   margin-top: 10px;
   font-size: 80px;
   text-align: center;
   width: 103px;
-  transition: 0.5s; }
+  transition: 0.2s; }
 
 .why-reason:hover .icon,
 .advantage:hover .icon {
@@ -88,15 +87,18 @@ body {
   margin: 50px 0; }
 
 .redux-comparison {
-  background-color: darkgrey;
+  background-color: salmon;
   margin: 0 auto;
   width: 100%;
   max-width: 1000px; }
 
 .comparison-btn {
-  display: none;
-  margin: 20px auto 0;
+  display: inline-block;
+  margin: 10px 7px 0;
   cursor: pointer; }
+
+.btn-focus {
+  box-shadow: 4px 4px 0px teal; }
 
 .comparison-btn-container {
   padding-top: 10px; }
@@ -120,18 +122,12 @@ body {
 .fill {
   fill: white; }
 
-.advantages-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-
 .advantages-title {
   width: 100%;
   text-align: center;
   font-size: 36px; }
 
 .advantage {
-  width: 40%;
   max-width: 500px;
   min-width: 300px;
   margin: 20px; }
@@ -174,27 +170,39 @@ body {
     min-width: 300px;
     margin: 20px 0;
     padding: 0 5px; } }
-.contributor-header {
+.cg-header {
   position: fixed;
   width: 100%; }
 
-.contributor-guide-container {
+.cg-container {
   padding: 0; }
 
-.contributor-guide {
+.cg {
   font-family: Helvetica, serif;
   padding: 80px 50px; }
 
-.contributor-guide p {
+.cg-heading {
+  text-align: center; }
+
+.cg-title {
+  display: block;
+  font-size: 30px;
+  margin: 10px; }
+
+.cg-ai {
+  display: block;
+  font-size: 20px; }
+
+.cg p {
   font-size: 16px;
   line-height: 20px; }
 
-.contributor-guide ul,
-.contributor-guide ol {
+.cg ul,
+.cg ol {
   line-height: 20px;
   font-size: 16px; }
 
-.contributor-guide ul {
+.cg ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -204,7 +212,7 @@ body {
   width: 130px;
   border: 1px solid black;
   border-radius: 20px;
-  background-color: #f6f6f6;
+  background-color: white;
   margin: 20px;
   transition: 0.5s; }
 
@@ -231,7 +239,7 @@ body {
 .link-reset > .repo-button {
   display: inline;
   margin: 50px;
-  background-color: darkgrey; }
+  background-color: salmon; }
 
 @media all and (max-width: 960px) {
   .link-reset > .repo-button {
@@ -248,14 +256,20 @@ body {
   width: 100%;
   max-width: 1200px;
   height: 50px;
-  background-color: darkgrey;
+  background-color: salmon;
   line-height: 50px;
   text-shadow: 1px 1px 2px white;
   color: black;
-  transition: top 0.5s; }
+  transition: top 0.2s; }
 
 .slideOff {
   top: -50px; }
+
+.header-casium-logo {
+  width: 200px;
+  position: relative;
+  top: -38px;
+  left: -60px; }
 
 .nav-logo {
   font-size: 50px; }
@@ -281,37 +295,33 @@ body {
 #docs {
   padding: 10px 20px;
   margin-top: 5px;
-  border-radius: 10px;
-  transition: 0.5s; }
+  transition: 0.2s; }
 
 #docs {
   width: 157px;
   height: 40px; }
 
 #docs:hover {
-  background-color: #f6f6f6; }
+  background-color: white; }
 
 .submenu {
   opacity: 0;
   display: none;
   position: relative;
-  height: 83px;
-  width: 180px;
-  border: 1px solid black;
+  height: 80px;
+  width: 157px;
   top: -10px;
-  left: -21px;
+  left: -20px;
   list-style: none;
-  border-radius: 10px;
-  background-color: darkgrey;
+  background-color: salmon;
   padding-left: 0px;
   margin-top: 20px;
-  transition: all 0.5s; }
+  transition: all 0.2s; }
 
 .submenu-item {
   display: block;
   padding: 10px 0 10px 20px;
-  border-radius: 10px;
-  transition: 0.5s; }
+  transition: 0.2s; }
 
 #docs:hover .submenu,
 .submenu:hover .submenu {
@@ -325,7 +335,7 @@ body {
   .nav {
     display: block;
     width: 175px;
-    background-color: darkgrey;
+    background-color: salmon;
     position: fixed;
     right: -200px;
     top: 50px;
@@ -358,7 +368,7 @@ body {
     font-size: 25px; }
 
   .nav-container > .hamburger-btn:hover {
-    background-color: #f6f6f6; }
+    background-color: white; }
 
   .hamburger-btn-open,
   .hamburger-btn-close {
@@ -418,29 +428,28 @@ body {
     justify-content: center;
     flex-wrap: wrap; } }
 .footer {
+  display: flex;
+  justify-content: flex-start;
   padding: 10px;
   background-color: #f6f6f6; }
 
 .nav-footer {
-  display: flex;
-  justify-content: space-around; }
+  display: inline-block; }
 
 .nav-footer > li {
-  list-style: none;
-  margin: 10px 0; }
+  list-style: none; }
 
 .nav-footer > li > a {
   padding: 10px;
-  font-size: 25px; }
+  font-size: 18px; }
 
 .nav-footer > li > a:hover {
   color: teal; }
 
 .footer-logo {
-  background-color: #f6f6f6;
+  background-color: rgba(255, 255, 255, 0);
   background-image: url(../img/casium-logo/casium_logo_mdpi.png);
   background-size: contain;
-  margin: 0 auto;
   width: 200px;
   height: 100px; }
 
@@ -450,7 +459,7 @@ body {
 
 @media all and (max-width: 800px) {
   .nav-footer > li > a {
-    font-size: 20px; } }
+    font-size: 15px; } }
 @media all and (max-width: 550px) {
   .nav-footer > li > a {
     display: none; } }

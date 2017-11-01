@@ -1,25 +1,37 @@
-.contributor-header {
+.cg-header {
   position: fixed;
   width: 100%;
 }
-.contributor-guide-container {
+.cg-container {
   padding: 0;
 }
-.contributor-guide {
+.cg {
   font-family: Helvetica, serif;
   padding: 80px 50px;
 }
-.contributor-guide p {
+.cg-heading{
+  text-align: center;
+}
+.cg-title{
+  display: block;
+  font-size: 30px;
+  margin: 10px;
+}
+.cg-ai{
+  display: block;
+  font-size: 20px;
+}
+.cg p {
   font-size: 16px;
   line-height: 20px;
 }
 
-.contributor-guide ul,
-.contributor-guide ol {
+.cg ul,
+.cg ol {
   line-height: 20px;
   font-size: 16px;
 }
-.contributor-guide ul {
+.cg ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

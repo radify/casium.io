@@ -43,14 +43,13 @@ body {
   padding: 15px 30px;
   margin: 50px auto 60px;
   background-color: white;
-  border-radius: 5px;
   color: $theme-color-3;
   font-size: 20px;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 .button:hover {
-  box-shadow: 2px 2px 15px $theme-color-3;
+  box-shadow: 4px 4px 0px $theme-color-3;
 }
 .link-reset,
 .link-reset:hover,
@@ -73,7 +72,7 @@ body {
   margin: 20px 0;
   padding: 5px;
   opacity: 0;
-  transition: 1s;
+  transition: text-shadow 0.5s, opacity 1s;
 }
 
 .icon {
@@ -81,7 +80,7 @@ body {
   font-size: 80px;
   text-align: center;
   width: 103px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .why-reason:hover,
 .advantage:hover {
@@ -109,19 +108,18 @@ body {
   max-width: 1000px;
 }
 .comparison-btn {
-  display: none;
-  margin: 20px auto 0;
+  display: inline-block;
+  margin: 10px 7px 0;
   cursor: pointer;
+}
+.btn-focus{
+  box-shadow: 4px 4px 0px $theme-color-3;
 }
 .comparison-btn-container {
   padding-top: 10px;
 }
-// .redux-btn {
-// 	display: none;
-// }
-// .casium-btn {
-// 	display: none;
-// }
+.redux-btn {}
+.casium-btn {}
 .redux-example {
   display: none;
   width: 100%;
@@ -142,18 +140,13 @@ body {
   fill: white;
 }
 
-.advantages-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+.advantages-container {}
 .advantages-title {
   width: 100%;
   text-align: center;
   font-size: 36px;
 }
 .advantage {
-  width: 40%;
   max-width: 500px;
   min-width: 300px;
   margin: 20px;

@@ -9,10 +9,16 @@
   line-height: 50px;
   text-shadow: 1px 1px 2px white;
   color: black;
-  transition: top 0.5s;
+  transition: top 0.2s;
 }
 .slideOff {
   top: -50px;
+}
+.header-casium-logo{
+  width: 200px;
+  position: relative;
+  top: -38px;
+  left: -60px;
 }
 .nav-logo {
   font-size: 50px;
@@ -40,8 +46,7 @@
 #docs {
   padding: 10px 20px;
   margin-top: 5px;
-  border-radius: 10px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 #docs {
   width: 157px;
@@ -54,23 +59,20 @@
   opacity: 0;
   display: none;
   position: relative;
-  height: 83px;
-  width: 180px;
-  border: 1px solid black;
+  height: 80px;
+  width: 157px;
   top: -10px;
-  left: -21px;
+  left: -20px;
   list-style: none;
-  border-radius: 10px;
   background-color: $theme-color-2;
   padding-left: 0px;
   margin-top: 20px;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 .submenu-item {
 	display: block;
   padding: 10px 0 10px 20px;
-  border-radius: 10px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 #docs:hover,
 .submenu:hover {
