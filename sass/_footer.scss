@@ -9,20 +9,33 @@
 }
 .nav-footer > li {
   list-style: none;
+  margin: 2px 0;
 }
 .nav-footer > li > a {
-  padding: 10px;
+  padding: 5px;
   font-size: 18px;
 }
 .nav-footer > li > a:hover {
   color: $theme-color-3;
 }
-.footer-logo {
+.logo-copyright-container{
+  width: 255px;
+}
+.footer-casium-logo {
   background-color: rgba(255, 255, 255, 0);
-  background-image: url(../img/casium-logo/casium_logo_mdpi.png);
-  background-size: contain;
-  width: 200px;
-  height: 100px;
+  width: 226px;
+  position: relative;
+  top: -48px;
+  left: -70px;
+}
+.copyright-container{
+  width: 255px;
+}
+.copyright-ai{
+  margin: -54px 0 0 10px;
+}
+.code-license{
+  margin: -3px 0 0 10px;
 }
 .contact {
   text-align: center;

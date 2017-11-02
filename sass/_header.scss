@@ -93,8 +93,6 @@
     position: fixed;
     right: -200px;
     top: 50px;
-    border-radius: 10px;
-    border: 1px solid black;
     transition: 1s;
   }
   .hamburger-show {
@@ -112,8 +110,8 @@
   }
   #docs:hover {
     .submenu {
-      left: -190px;
-      top: -52px;
+      left: -177px;
+      top: -50px;
     }
     .hamburger-show {
       right: 160px;

@@ -33,13 +33,13 @@ body {
   padding: 15px 30px;
   margin: 50px auto 60px;
   background-color: white;
-  color: teal;
+  color: #317775;
   font-size: 20px;
   text-align: center;
   transition: all 0.2s; }
 
 .button:hover {
-  box-shadow: 4px 4px 0px teal; }
+  box-shadow: 4px 4px 0px #317775; }
 
 .link-reset,
 .link-reset:hover,
@@ -69,10 +69,6 @@ body {
   width: 103px;
   transition: 0.2s; }
 
-.why-reason:hover .icon,
-.advantage:hover .icon {
-  text-shadow: 2px 2px 10px teal; }
-
 .why-reason-text {
   text-align: left;
   width: 310px;
@@ -87,7 +83,7 @@ body {
   margin: 50px 0; }
 
 .redux-comparison {
-  background-color: salmon;
+  background-color: #e2a878;
   margin: 0 auto;
   width: 100%;
   max-width: 1000px; }
@@ -98,7 +94,7 @@ body {
   cursor: pointer; }
 
 .btn-focus {
-  box-shadow: 4px 4px 0px teal; }
+  box-shadow: 4px 4px 0px #317775; }
 
 .comparison-btn-container {
   padding-top: 10px; }
@@ -146,7 +142,7 @@ body {
   font-size: 16px; }
 
 .advantage-link:hover {
-  color: teal; }
+  color: #317775; }
 
 .link-icon-slide {
   animation: bounce 1s; }
@@ -212,7 +208,7 @@ body {
   width: 130px;
   border: 1px solid black;
   border-radius: 20px;
-  background-color: white;
+  background-color: #fdf9f6;
   margin: 20px;
   transition: 0.5s; }
 
@@ -239,7 +235,7 @@ body {
 .link-reset > .repo-button {
   display: inline;
   margin: 50px;
-  background-color: salmon; }
+  background-color: #e2a878; }
 
 @media all and (max-width: 960px) {
   .link-reset > .repo-button {
@@ -256,7 +252,7 @@ body {
   width: 100%;
   max-width: 1200px;
   height: 50px;
-  background-color: salmon;
+  background-color: #e2a878;
   line-height: 50px;
   text-shadow: 1px 1px 2px white;
   color: black;
@@ -302,7 +298,7 @@ body {
   height: 40px; }
 
 #docs:hover {
-  background-color: white; }
+  background-color: #fdf9f6; }
 
 .submenu {
   opacity: 0;
@@ -313,7 +309,7 @@ body {
   top: -10px;
   left: -20px;
   list-style: none;
-  background-color: salmon;
+  background-color: #e2a878;
   padding-left: 0px;
   margin-top: 20px;
   transition: all 0.2s; }
@@ -329,18 +325,16 @@ body {
   opacity: 1; }
 #docs:hover .submenu-item:hover,
 .submenu:hover .submenu-item:hover {
-  background-color: white; }
+  background-color: #e3c2b5; }
 
 @media all and (max-width: 800px) {
   .nav {
     display: block;
     width: 175px;
-    background-color: salmon;
+    background-color: #e2a878;
     position: fixed;
     right: -200px;
     top: 50px;
-    border-radius: 10px;
-    border: 1px solid black;
     transition: 1s; }
 
   .hamburger-show {
@@ -357,8 +351,8 @@ body {
     margin-top: 0; }
 
   #docs:hover .submenu {
-    left: -190px;
-    top: -52px; }
+    left: -177px;
+    top: -50px; }
   #docs:hover .hamburger-show {
     right: 160px; }
 
@@ -368,7 +362,7 @@ body {
     font-size: 25px; }
 
   .nav-container > .hamburger-btn:hover {
-    background-color: white; }
+    background-color: #fdf9f6; }
 
   .hamburger-btn-open,
   .hamburger-btn-close {
@@ -383,7 +377,7 @@ body {
   .hamburger-btn-show {
     opacity: 1; } }
 .hero {
-  background-color: #f6f6f6;
+  background-color: #b96646;
   text-align: left;
   color: black;
   padding: 5px 0 20px; }
@@ -431,27 +425,40 @@ body {
   display: flex;
   justify-content: flex-start;
   padding: 10px;
-  background-color: #f6f6f6; }
+  background-color: #b96646; }
 
 .nav-footer {
   display: inline-block; }
 
 .nav-footer > li {
-  list-style: none; }
+  list-style: none;
+  margin: 2px 0; }
 
 .nav-footer > li > a {
-  padding: 10px;
+  padding: 5px;
   font-size: 18px; }
 
 .nav-footer > li > a:hover {
-  color: teal; }
+  color: #317775; }
 
-.footer-logo {
+.logo-copyright-container {
+  width: 255px; }
+
+.footer-casium-logo {
   background-color: rgba(255, 255, 255, 0);
-  background-image: url(../img/casium-logo/casium_logo_mdpi.png);
-  background-size: contain;
-  width: 200px;
-  height: 100px; }
+  width: 226px;
+  position: relative;
+  top: -48px;
+  left: -70px; }
+
+.copyright-container {
+  width: 255px; }
+
+.copyright-ai {
+  margin: -54px 0 0 10px; }
+
+.code-license {
+  margin: -3px 0 0 10px; }
 
 .contact {
   text-align: center;

@@ -1,3 +1,5 @@
+<img src="../assets/casium_logo.svg" alt="casium-logo" style="width: 50%;min-width: 190px;position: relative;left: 20%;"/>
+
 # [The Casium Front-End Architecture](https://michaeljwiebe.github.io/axios-site/index.html)
 
 The Casium Front-End Architecture is a _data_ and _effects_ management system that helps you manage the complexity of large React applications reliably and predictably.

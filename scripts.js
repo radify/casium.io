@@ -67,6 +67,15 @@ function toggleNav(currentScrollY) {
   lastScrollY = currentScrollY;
 }
 
+var faCog = $('.fa-cog');
+var performanceAdvantage = document.getElementsByClassName("advantage")[0];
+performanceAdvantage.addEventListener("mouseover", () => {
+  faCog.addClass('fa-spin')
+  setTimeout(()=>{
+    faCog.removeClass('fa-spin')
+  }, 1500);
+});
+
 // removed until we have content
 // /*
 // *	link arrows jump and return

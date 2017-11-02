@@ -1,0 +1,554 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>The Counter Example · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Extensions.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="Counter-Example.html">
+            
+                <a href="Counter-Example.html">
+            
+                    
+                    The Counter Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Extensions.html">
+            
+                <a href="Extensions.html">
+            
+                    
+                    Extensions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Messages-and-Immutability.html">
+            
+                <a href="Messages-and-Immutability.html">
+            
+                    
+                    Messages and Immutability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="contributor-guide.html">
+            
+                <a href="contributor-guide.html">
+            
+                    
+                    Contributor Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >The Counter Example</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="the-counter-example">The Counter Example</h2>
+<p>The basic implementation of a container looks like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-keyword">import</span> Message <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;architecture/message&apos;</span>;
+<span class="hljs-keyword">import</span> { container } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;architecture/app&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Increment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decrement</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+
+  init: () =&gt; ({ count: <span class="hljs-number">0</span> }),
+
+  update: [
+    [Increment, ({ count }) =&gt; ({ count: count + <span class="hljs-number">1</span> })],
+    [Decrement, ({ count }) =&gt; ({ count: count - <span class="hljs-number">1</span> })]
+  ],
+
+  view: ({ emit, count }) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Decrement)}</span>&gt;</span> - <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+     { count }
+     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Increment)}</span>&gt;</span> + <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+})
+</code></pre>
+<p>Containers are composed primarily of 3 things:</p>
+<ul>
+<li><strong><code>init</code></strong>: A function that returns the container&apos;s initial state. This is called when the container is first instantiated, and should set up the default values for all state properties to be used in the container. This should be a plain JavaScript <code>Object</code>. (This function will sometimes take a parameter if state is being delegated to it from higher up &#x2014; we&apos;ll get to that later). In general, containers shouldn&apos;t have to check whether values exist. If they do, you should probably update your <code>init</code> function.</li>
+<li><strong><code>update</code></strong>: A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank"><code>Map</code></a> that pairs <em>messages</em> to <em>update handlers</em> (or <em>updaters</em>). This is where the action happens. All changes to the application, whether state changes or side-effects (like HTTP calls) happen via <em>messages</em>. This allows the entire state and lifecycle of the application to decompose to simple data structures. Containers intercept messages, and call the updater for that message with the current state as a parameter. The updater returns the new state. Finally, the container re-renders the view with the new state.</li>
+<li><strong><code>view</code></strong>: The view is a stateless React component that receives the container&apos;s current state as its props (as well as any other props passed to the container by React). In addition to the state, it also receives one special value, <strong><code>emit</code></strong>, which is a function that accepts a message and gets assigned to an event handler. This is what allows the container to be notified about events that we care about and respond with the appropriate updater.</li>
+</ul>
+<h3 id="messages">Messages</h3>
+<p>You may have also noticed the <code>Increment</code> and <code>Decrement</code> classes up at the top that extend <code>Message</code>. As you probably guessed, those are the <em>messages</em> referenced in the explanation above. Messages are a powerful abstraction, but right now we&apos;re just using them to link an event handler to an update we want to apply.</p>
+<h2 id="messages-with-data">Messages With Data</h2>
+<p>In our initial example, we completed the cycle of...</p>
+<ol>
+<li>Setting up the component with an initial state</li>
+<li>Rendering the component with the initial state</li>
+<li>Receiving messages from the view</li>
+<li>Handling the messages in <code>update</code></li>
+<li>Updating the state</li>
+<li>Re-rendering the view</li>
+<li>Go to (3)</li>
+</ol>
+<p>It looks a bit like this...</p>
+<p><img src="assets/simple_architecture.png" alt="Simple Architecture" title="Simple architecture example"></p>
+<p>This is a good start, but it&apos;s somewhat limiting. What if we need to step our counter by 100, or 1000? That&apos;s a lot of clicking. We could create up/down messages &amp; buttons for powers of 10, but that&apos;s a lot of boilerplate.</p>
+<p>Instead, we can turn our counter display into an <code>&lt;input /&gt;</code> to allow users to type in arbitrary values, and wire our input up to the container with a new message:</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Increment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decrement</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SetCounter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{} <span class="hljs-comment">// &lt;-- New thing</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+
+  init: () =&gt; ({ count: <span class="hljs-number">0</span> }),
+
+  update: <span class="hljs-keyword">new</span> [
+    [Increment, ({ count }) =&gt; ({ count: count + <span class="hljs-number">1</span> })],
+    [Decrement, ({ count }) =&gt; ({ count: count - <span class="hljs-number">1</span> })],
+    [SetCounter, (state, { value }) =&gt; ({ count: <span class="hljs-built_in">parseInt</span>(value, <span class="hljs-number">10</span>) })]
+  ],
+
+  view: ({ emit, count }) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Decrement)}</span>&gt;</span> - <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">{count}</span>
+        <span class="hljs-attr">onChange</span>=<span class="hljs-string">{emit(SetCounter)}</span>
+      /&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Increment)}</span>&gt;</span> + <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  )
+})
+</span></code></pre>
+<p>We&apos;ve created a new message, <code>SetCounter</code>, to handle our new event.  You&apos;ll also notice that the updater for <code>SetCounter</code> looks a bit different from the ones before. In addition to being typed objects, messages hold <em>data</em>, either from the view, or from <em>commands</em> (we&apos;ll get to that later). In the previous examples, our messages didn&apos;t use any data &#x2014; we just took in the existing state (destructured it), and returned a new state.</p>
+<p>Updaters receive message data as their second parameter, and we can <a href="http://2ality.com/2015/01/es6-destructuring.html" target="_blank">destructure</a> the part we care about, use it to calculate a new state object, and return it.</p>
+<p>By default, messages emitted from DOM events will have <code>value</code> and <code>checked</code> properties, which will match the properties of the element emitting the event, for convenience purposes.</p>
+<h3 id="parameterizing-messages">Parameterizing Messages</h3>
+<p>Suppose all that typing is just too much, and we decide we <em>did</em> want buttons to step our counter by larger increments. We can add parameters to our messages directly in the view, and refactor our existing updaters to accomodate them.</p>
+<p>First, we&apos;ll add <em>default values</em> to our messages:</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Increment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{
+  <span class="hljs-keyword">static</span> defaults = { step: <span class="hljs-number">1</span> }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decrement</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{
+  <span class="hljs-keyword">static</span> defaults = { step: <span class="hljs-number">1</span> }
+}
+</code></pre>
+<p>This means that these messages will always pass a <code>step</code> value to their update handlers: either one provided by the view, or the default value of 1. Next, we&apos;ll override the default <code>step</code> value in the view, by adding a new pair of buttons:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+
+  <span class="hljs-comment">// ...</span>
+
+  view: ({ emit, count }) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit([Decrement,</span> { <span class="hljs-attr">step:</span> <span class="hljs-attr">10</span> }])}&gt;</span> -- <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Decrement)}</span>&gt;</span> - <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">{count}</span>
+        <span class="hljs-attr">onChange</span>=<span class="hljs-string">{emit(SetCounter)}</span>
+      /&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Increment)}</span>&gt;</span> + <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit([Increment,</span> { <span class="hljs-attr">step:</span> <span class="hljs-attr">10</span> }])}&gt;</span> ++ <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  )
+})
+</span></code></pre>
+<p>We can see in the new <code>++</code> and <code>--</code> buttons that the format for calling <code>emit()</code> has changed: instead of just passing a message class, we&apos;re now passing an array with a message class and an object with some values. These values will be merged with any other data received from the view when constructing the message.</p>
+<p>Finally, we need to close the loop and modify our update handlers to accept the <code>step</code> value. As above, updaters receive message data as their second parameter. Since we only care about <code>step</code>, we&apos;ll destructure it directly:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+
+  <span class="hljs-comment">// ...</span>
+
+  update: [
+    [Increment, ({ count }, { step }) =&gt; ({ count: count + step })],
+    [Decrement, ({ count }, { step }) =&gt; ( count: count - step })],
+    [SetCounter, (state, { value }) =&gt; ({ count: <span class="hljs-built_in">parseInt</span>(value, <span class="hljs-number">10</span>) })]
+  ],
+
+  <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+<p>Now the counter is updating according to <code>step</code>, and we can reuse the same message in different contexts by parameterizing it appropriately. Next we&apos;ll look at how we can leverage and extend messages to encapsulate business logic and reduce updater boilerplate.</p>
+<h2 id="actually-doing-stuff-aka-effects">Actually Doing Stuff (AKA &apos;effects&apos;)</h2>
+<p>So far we&apos;ve looked at managing and rendering data within an application. That&apos;s a good start, but in order to do something useful, we need to step outside our cozy, stable world of immutable data and interact with very mutable, unstable things. Things like servers, and browser services like cookies and local storage.</p>
+<p>These interactions are called <em>side-effects</em>, and side effects trip us up because they break our guarantees about the state of our application. Up till now, we&apos;ve been able to model the state of our application with a very simple equation: <code>current = initial + (messages...)</code> &#x2014; in other words, each state is the sum of the state before it, plus the most recent message, going all the way back to the initial state.</p>
+<h3 id="lifestyles-of-the-rich-and-the-stateless">Lifestyles of the Rich and the Stateless</h3>
+<p>Think of it like a bank ledger: the current balance is just a sum of all the transactions. However, when we introduce side-effects, our bank balance starts changing out from under us. We no longer have an audit log of what it should be or why. We have no way to predict it, and we&apos;ve lost the ability to reproduce it or examine it in an isolated context.</p>
+<p>So, how do we make our state predictable again? With more messages, of course!</p>
+<p>Up until now, we&apos;ve been both producing (in the view) and consuming (in the update) our own messages. <em>Command messages</em> (or just <em>commands</em>) are a new type of message: we produce them, but they&apos;re consumed by the architecture, in the background, away from our application code. The architecture <em>manages</em> our effects for us. We use these commands any time we want to read, write, or execute something outside of our state, like HTTP calls, cookies, etc.</p>
+<p>As with state modifications, commands are returned by update handlers. This allows our update handlers to be <a href="https://softwareengineering.stackexchange.com/questions/254304/what-is-referential-transparency" target="_blank">pure, stateless, side-effect-free functions</a>: they always return the same value for the given inputs.</p>
+<p>Further, they don&apos;t <em>do</em> things: the simply return values that <em>represent</em> doing things. Let&apos;s test-drive this by implementing a button to save the counter to local storage. We&apos;ll start by importing the necessary commands. The architecture comes pre-packaged with commands for most common operations.</p>
+<p>We can import and use these commands to tell the architecture what effects we want, and the architecture will handle them for us:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { LocalStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;architecture/commands&apos;</span>;
+</code></pre>
+<p>This imports a module object with a few different classes for our consumption.</p>
+<p>Next, we&apos;ll implement a button to trigger our save, with a new <code>SaveCounter</code> message, and add a placeholder update handler where we&apos;ll eventually put our new command:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ...</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SaveCounter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+  <span class="hljs-comment">// ...</span>
+
+  update: [
+    <span class="hljs-comment">// ...</span>
+    [SaveCounter, (state) =&gt; [state]]
+  ],
+
+  view: ({ emit, count }) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      // ...
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(SaveCounter)}</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+})
+</code></pre>
+<p>This doesn&apos;t do anything yet (except render a new button), but we can already see that something with the update handler is a little different: we&apos;re still returning the state, but now it&apos;s inside an array. This gives us a place to put our commands, since we&apos;ll be returning two things instead of one. Let&apos;s add that second thing now:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+  <span class="hljs-comment">// ...</span>
+
+  update: [
+    <span class="hljs-comment">// ...</span>
+    [SaveCounter, (state) =&gt; [state, <span class="hljs-keyword">new</span> LocalStorage.Write({
+      key: <span class="hljs-string">&apos;counter&apos;</span>,
+      value: state.count
+    })]]
+  ],
+
+  <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+<p>Here, we&apos;re returning a new instance of the <code>LocalStorage.Write</code> command message, and giving it a <code>key</code> and a <code>value</code>, which tells local storage what to write.</p>
+<p>This is all well and good for fire-and-forget operations like writing to local storage, but what about <em>reading</em>? What about commands that do things where we care about the result?</p>
+<p>We handle this by giving the command a <em>result message</em>. These are normal messages that we implement and handle ourselves, just like the ones emitted from the view. We pass one of these messages to the command in a <code>result</code> key, and the architecture will send that message back to our view when the command has executed.</p>
+<p>This extends the cycle of our data flow like so:</p>
+<p><img src="assets/architecture_with_commands.png" alt="Architecture with Commands" title="Architecture with Commands"></p>
+<p>In addition to the primary cycle of messages and state changes (and rendering, etc.), we now have a secondary cycle where updaters <em>also</em> return commands (in addition to updating state), which send messages back to an updater.</p>
+<p>This style might feel weird if you&apos;re used to using promises or callbacks. Promises and callbacks make it easy to do long chains of deeply-nested behaviors, that can be tough to decompose when debugging, testing, or refactoring.</p>
+<p>This approach lets us flatten out those chains, letting us handle one logical update at a time, in isolation from others.</p>
+<p>Let&apos;s try loading the counter back from local storage when the container initializes. Because we don&apos;t want to touch local storage directly, we&apos;ll have <code>init()</code> kick off a command that will be immediately handled and returned to the container in the form our <code>result</code> message (which we&apos;ll define below as <code>LoadCounter</code>).</p>
+<p>The expected return value format for the <code>init()</code> function is actually the same as for update handlers, so we can implement this just by changing what it returns:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ...</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoadCounter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+
+  init: () =&gt; [{ count: <span class="hljs-number">0</span> }, <span class="hljs-keyword">new</span> LocalStorage.Read({
+    key: <span class="hljs-string">&apos;counter&apos;</span>,
+    result: LoadCounter
+  })],
+
+  update: [
+    [LoadCounter, (state, { value }) =&gt; ({ count: value })],
+    <span class="hljs-comment">// ...</span>
+  ],
+
+  <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+<p><strong>@TODO</strong>: Sidebar explanation on different return formats.</p>
+<p>Again, we&apos;re changing the return value of <code>init()</code> to the array format we saw before, so that we have a way to return both our initial state <em>and</em> the command. We construct our <code>Read</code> message with the <code>key</code> we want to read, and <code>result</code>, which is the message that will be sent back to the container with, you guessed it: the result. This is symmetrical to the <code>Write</code> command, except that the <code>key</code> and the <code>value</code> are spread across the command and result message, respectively.</p>
+<p>We handle our <code>LoadCounter</code> message, destructuring the <code>value</code> property and assigning it to the <code>count</code> property of our new state. Great, right?</p>
+<p>Well, almost. Don&apos;t look now, but we&apos;ve just introduced an error into our app: <code>count</code> is supposed to be a number, but local storage returns strings. We need to pass <code>value</code> through <code>parseInt()</code> and... this is starting to look a lot like work we&apos;ve already done.</p>
+<p>Instead, we can reuse our existing <code>SetCounter</code> message &#x2014; both messages expect to have a <code>value</code> which gets number-ified and written to the <code>count</code> property of the state.</p>
+<p>Altogether, our app should look something like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-keyword">import</span> Message <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;architecture/message&apos;</span>;
+<span class="hljs-keyword">import</span> { container } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;architecture/app&apos;</span>;
+<span class="hljs-keyword">import</span> { LocalStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;architecture/commands&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Increment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{ <span class="hljs-keyword">static</span> defaults = { step: <span class="hljs-number">1</span> } }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decrement</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{ <span class="hljs-keyword">static</span> defaults = { step: <span class="hljs-number">1</span> } }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SetCounter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Message</span> </span>{}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> container({
+
+  init: () =&gt; [{ count: <span class="hljs-number">0</span> }, <span class="hljs-keyword">new</span> LocalStorage.Read({
+    key: <span class="hljs-string">&apos;counter&apos;</span>,
+    result: SetCounter
+  })],
+
+  update: [
+    [Increment, ({ count }, { step }) =&gt; ({ count: count + step })],
+    [Decrement, ({ count }, { step }) =&gt; ( count: count - step })],
+    [SetCounter, (state, { value }) =&gt; ({ count: <span class="hljs-built_in">parseInt</span>(value, <span class="hljs-number">10</span>) })],
+    [SaveCounter, (state) =&gt; [state, <span class="hljs-keyword">new</span> LocalStorage.Write({
+      key: <span class="hljs-string">&apos;counter&apos;</span>,
+      value: state.count
+    })]]
+  ],
+
+  view: ({ emit, count }) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit([Decrement,</span> { <span class="hljs-attr">step:</span> <span class="hljs-attr">10</span> }])}&gt;</span> -- <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Decrement)}</span>&gt;</span> - <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">{count}</span>
+        <span class="hljs-attr">onChange</span>=<span class="hljs-string">{emit(SetCounter)}</span>
+      /&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(Increment)}</span>&gt;</span> + <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit([Increment,</span> { <span class="hljs-attr">step:</span> <span class="hljs-attr">10</span> }])}&gt;</span> ++ <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{emit(SaveCounter)}</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  )
+})
+</span></code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Extensions.html" class="navigation navigation-next " aria-label="Next page: Extensions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"The Counter Example","level":"1.2","depth":1,"next":{"title":"Extensions","level":"1.3","depth":1,"path":"Extensions.md","ref":"Extensions.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Counter-Example.md","mtime":"2017-10-30T14:26:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-02T17:58:07.799Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
