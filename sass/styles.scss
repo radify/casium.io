@@ -43,13 +43,13 @@ body {
   padding: 15px 30px;
   margin: 50px auto 60px;
   background-color: white;
-  color: $theme-color-3;
+  color: $theme-color-2;
   font-size: 20px;
   text-align: center;
   transition: all 0.2s;
 }
 .button:hover {
-  box-shadow: 4px 4px 0px $theme-color-3;
+  box-shadow: 4px 4px 0px $theme-color-2;
 }
 .link-reset,
 .link-reset:hover,
@@ -96,13 +96,12 @@ body {
   vertical-align: top;
 }
 .demo {
-  background-color: lighten($theme-color-2, 50%);
   font-size: 40px;
   text-align: center;
   margin: 50px 0;
 }
 .redux-comparison {
-  background-color: $theme-color-2;
+  background-color: $theme-color;
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
@@ -113,7 +112,7 @@ body {
   cursor: pointer;
 }
 .btn-focus{
-  box-shadow: 4px 4px 0px $theme-color-3;
+  box-shadow: 4px 4px 0px $theme-color-2;
 }
 .comparison-btn-container {
   padding-top: 10px;

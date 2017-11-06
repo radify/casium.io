@@ -1,4 +1,4 @@
-<img src="../assets/casium_logo.svg" alt="casium-logo" style="width: 50%;min-width: 190px;position: relative;left: 20%;"/>
+<img src="../assets/casium_logo_stars.svg" alt="casium-logo" style="width: 50%;min-width: 190px;position: relative;left: 20%;"/>
 
 # [The Casium Front-End Architecture](https://michaeljwiebe.github.io/axios-site/index.html)
 

@@ -53,7 +53,7 @@
   height: 40px;
 }
 #docs:hover {
-  background-color: lighten($theme-color-2, 30%);
+  background-color: white;
 }
 .submenu {
   opacity: 0;
@@ -81,7 +81,7 @@
     opacity: 1;
   }
   .submenu-item:hover {
-    background-color: lighten($theme-color, 30%);
+    background-color: white;
   }
 }
 
@@ -123,7 +123,7 @@
     font-size: 25px;
   }
   .nav-container > .hamburger-btn:hover {
-    background-color: lighten($theme-color-2, 30%);
+    background-color: white;
   }
   .hamburger-btn-open,
   .hamburger-btn-close {

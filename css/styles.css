@@ -33,13 +33,13 @@ body {
   padding: 15px 30px;
   margin: 50px auto 60px;
   background-color: white;
-  color: #317775;
+  color: #ff3b3f;
   font-size: 20px;
   text-align: center;
   transition: all 0.2s; }
 
 .button:hover {
-  box-shadow: 4px 4px 0px #317775; }
+  box-shadow: 4px 4px 0px #ff3b3f; }
 
 .link-reset,
 .link-reset:hover,
@@ -77,13 +77,12 @@ body {
   vertical-align: top; }
 
 .demo {
-  background-color: white;
   font-size: 40px;
   text-align: center;
   margin: 50px 0; }
 
 .redux-comparison {
-  background-color: #e2a878;
+  background-color: #a9a9a9;
   margin: 0 auto;
   width: 100%;
   max-width: 1000px; }
@@ -94,7 +93,7 @@ body {
   cursor: pointer; }
 
 .btn-focus {
-  box-shadow: 4px 4px 0px #317775; }
+  box-shadow: 4px 4px 0px #ff3b3f; }
 
 .comparison-btn-container {
   padding-top: 10px; }
@@ -142,7 +141,7 @@ body {
   font-size: 16px; }
 
 .advantage-link:hover {
-  color: #317775; }
+  color: #caebf2; }
 
 .link-icon-slide {
   animation: bounce 1s; }
@@ -208,7 +207,7 @@ body {
   width: 130px;
   border: 1px solid black;
   border-radius: 20px;
-  background-color: #fdf9f6;
+  background-color: #ffd4d5;
   margin: 20px;
   transition: 0.5s; }
 
@@ -235,7 +234,7 @@ body {
 .link-reset > .repo-button {
   display: inline;
   margin: 50px;
-  background-color: #e2a878; }
+  background-color: #ff3b3f; }
 
 @media all and (max-width: 960px) {
   .link-reset > .repo-button {
@@ -252,7 +251,7 @@ body {
   width: 100%;
   max-width: 1200px;
   height: 50px;
-  background-color: #e2a878;
+  background-color: #ff3b3f;
   line-height: 50px;
   text-shadow: 1px 1px 2px white;
   color: black;
@@ -298,7 +297,7 @@ body {
   height: 40px; }
 
 #docs:hover {
-  background-color: #fdf9f6; }
+  background-color: white; }
 
 .submenu {
   opacity: 0;
@@ -309,7 +308,7 @@ body {
   top: -10px;
   left: -20px;
   list-style: none;
-  background-color: #e2a878;
+  background-color: #ff3b3f;
   padding-left: 0px;
   margin-top: 20px;
   transition: all 0.2s; }
@@ -325,13 +324,13 @@ body {
   opacity: 1; }
 #docs:hover .submenu-item:hover,
 .submenu:hover .submenu-item:hover {
-  background-color: #e3c2b5; }
+  background-color: white; }
 
 @media all and (max-width: 800px) {
   .nav {
     display: block;
     width: 175px;
-    background-color: #e2a878;
+    background-color: #ff3b3f;
     position: fixed;
     right: -200px;
     top: 50px;
@@ -362,7 +361,7 @@ body {
     font-size: 25px; }
 
   .nav-container > .hamburger-btn:hover {
-    background-color: #fdf9f6; }
+    background-color: white; }
 
   .hamburger-btn-open,
   .hamburger-btn-close {
@@ -377,7 +376,7 @@ body {
   .hamburger-btn-show {
     opacity: 1; } }
 .hero {
-  background-color: #b96646;
+  background-color: #a9a9a9;
   text-align: left;
   color: black;
   padding: 5px 0 20px; }
@@ -425,7 +424,7 @@ body {
   display: flex;
   justify-content: flex-start;
   padding: 10px;
-  background-color: #b96646; }
+  background-color: #a9a9a9; }
 
 .nav-footer {
   display: inline-block; }
@@ -439,7 +438,7 @@ body {
   font-size: 18px; }
 
 .nav-footer > li > a:hover {
-  color: #317775; }
+  color: #caebf2; }
 
 .logo-copyright-container {
   width: 255px; }

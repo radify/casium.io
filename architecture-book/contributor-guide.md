@@ -1,9 +1,11 @@
-#AI Labs Open Source Contributor Guide
+[<img src="../assets/casium_logo_text.svg" alt="casium logo text only" style="width: 50%; min-width: 190px;position: relative;left: -17.5%;"/>](casium.io)
+#Open Source Contributor Guide
 
 Last Update: Oct 10, 2017
 
-[Architecture](https://github.com/ai-labs-team/architecture)
-[Architecture-devtools](https://github.com/ai-labs-team/architecture-devtools)
+[Casium Repo](https://github.com/ai-labs-team/architecture)
+
+[Casium Devtools Repo](https://github.com/ai-labs-team/architecture-devtools)
 
 ##Introduction
 Thank you for your interest in helping out. AI Labs is committed to building the best possible software and we believe that one of the best ways to do this is to contribute to the development community and (hopefully) benefit from wide peer review. Please feel free to reach out to #EMAIL/WEB# with any questions.
@@ -31,4 +33,8 @@ Here’s a quick and basic rundown of how to contribute in a helpful way.
 Once you submit a PR it will be reviewed and either returned with questions or suggestions or accepted with a merge. This process may take a bit so please be patient and feel free to reach out if you have concerns.
 
 ##How can I get help?
-Please visit [Casium](https://casium.io) to connect with other contributors.
+Please visit [Casium](casium.io) to connect with other contributors.
+
+##Thanks to Advisor Innovation Labs for supporting this open source project
+[<img src="assets/ai-labs-logo.svg" style="width: 100px;
+    margin-left: 44%" alt="Advisor Innovation Labs logo"/>](https://advisorinnovationlabs.com)
