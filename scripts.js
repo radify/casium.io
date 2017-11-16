@@ -2,23 +2,18 @@
 *	casium/redux comparison images
 **/
 
-var comparisonBtnContainer = $('.comparison-btn-container');
-var reduxExample = $('.redux-example');
-var casiumExample = $('.casium-example');
-var reduxBtn = $('.redux-btn');
-var casiumBtn = $('.casium-btn');
-reduxBtn.click(()=>{
-  reduxExample.addClass('block');
-  casiumExample.removeClass('block');
-  reduxBtn.addClass('btn-focus');
-  casiumBtn.removeClass('btn-focus');
+
+var reduxExample = $('#redux-example');
+var casiumExample = $('#casium-example');
+var toggleSwitch = $('#toggleSwitch');
+
+/* Oh boy oh boy this is ugly! */
+toggleSwitch.mouseup(()=>{
+  reduxExample.toggleClass('block');
+  casiumExample.toggleClass('block');
+  reduxExample.toggleClass('hidden');
+  casiumExample.toggleClass('hidden');
 })
-casiumBtn.click(() => {
-  reduxExample.removeClass('block');
-  casiumExample.addClass('block');
-  reduxBtn.removeClass('btn-focus');
-  casiumBtn.addClass('btn-focus');
-});
 
 /*
 *	fading in of elements on scroll

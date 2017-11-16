@@ -4,29 +4,29 @@
   z-index: 10;
   width: 100%;
   max-width: 1200px;
-  height: 50px;
-  background-color: $theme-color-2;
-  line-height: 50px;
-  text-shadow: 1px 1px 2px white;
-  color: black;
-  transition: top 0.2s;
+  transition: top 0.5s;
+
+background: #eb008b;
+background: -moz-linear-gradient(-45deg, #eb008b 0%, #23a7ea 100%);
+background: -webkit-linear-gradient(-45deg, #eb008b 0%,#23a7ea 100%);
+background: linear-gradient(135deg, #eb008b 0%,#23a7ea 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#23a7ea',GradientType=1 );
 }
+
+
 .slideOff {
   top: -50px;
 }
-.header-casium-logo{
-  width: 200px;
-  position: relative;
-  top: -38px;
-  left: -60px;
-}
+
 .nav-logo {
-  font-size: 50px;
+  width: 135px;
+  padding-top: 15px;
 }
 .nav-container {
   height: 50px;
   display: flex;
   justify-content: flex-end;
+  float: right;
 }
 .nav-container > .hamburger-btn {
   display: none;
@@ -46,7 +46,7 @@
 #docs {
   padding: 10px 20px;
   margin-top: 5px;
-  transition: 0.2s;
+  transition: 0.15s;
 }
 #docs {
   width: 157px;
@@ -64,15 +64,15 @@
   top: -10px;
   left: -20px;
   list-style: none;
-  background-color: $theme-color-2;
+  background-color: white;
   padding-left: 0px;
   margin-top: 20px;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 .submenu-item {
 	display: block;
   padding: 10px 0 10px 20px;
-  transition: 0.2s;
+  transition: 0.15s;
 }
 #docs:hover,
 .submenu:hover {
@@ -82,6 +82,7 @@
   }
   .submenu-item:hover {
     background-color: white;
+      color: #eb008b;
   }
 }
 
@@ -89,11 +90,11 @@
   .nav {
     display: block;
     width: 175px;
-    background-color: $theme-color-2;
+    background-color: white;
     position: fixed;
     right: -200px;
     top: 50px;
-    transition: 1s;
+    transition: .1s;
   }
   .hamburger-show {
     right: 0;
@@ -130,7 +131,7 @@
     position: fixed;
     right: 24px;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
   }
   .hamburger-btn-close {
     font-size: 27px;
