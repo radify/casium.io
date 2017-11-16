@@ -1,33 +1,43 @@
 .hero {
-  background-color: $theme-color;
+  background: #f9f9f9;
+  background: -moz-linear-gradient(-45deg, #f9f9f9 15%, #c6c6c6 100%);
+  background: -webkit-linear-gradient(-45deg, #f9f9f9 15%,#c6c6c6 100%);
+  background: linear-gradient(135deg, #f9f9f9 15%,#c6c6c6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#c6c6c6',GradientType=1 );
+
   text-align: left;
-  color: black;
+  
   padding: 5px 0 20px;
 }
-.casium-logo {
-  display: block;
-  width: 300px;
-  margin: 90px 0 30px 42px;
+
+.hero-logo-container{
+  margin: 90px 0 30px 12%;
 }
+  .casium-logo {
+    display: block;
+    width: 230px;
+
+  }
+
 .hero-text-container {
-  margin-left: 150px;
+  margin: 3% 0 3% 12%;
 }
-.hero-text {
-  margin: 150px 0 50px;
-  font-size: 120px;
-}
-.hero-sub-text-sm {
-  font-size: 18px;
-}
-.hero-sub-text {
-  margin: 0;
-  font-size: 39px;
-  max-width: 850px;
-}
-.hero-button {
-  display: inline-block;
-  margin: 20px 20px 0 0;
-}
+  .hero-text {
+    margin: 150px 0 50px;
+    font-size: 120px;
+  }
+  .hero-sub-text-sm {
+    font-size: 18px;
+  }
+  .hero-sub-text {
+    margin: 0;
+    font-size: 39px;
+    max-width: 850px;
+  }
+  .hero-button {
+    display: inline-block;
+    margin: 20px 20px 0 0;
+  }
 
 @media all and (max-width: 900px) {
   .casium-logo {

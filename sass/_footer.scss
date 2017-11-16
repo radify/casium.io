@@ -1,11 +1,12 @@
 .footer {
   display: flex;
   justify-content: flex-start;
-  padding: 10px;
+  padding: 30px;
   background-color: $theme-color;
 }
 .nav-footer {
   display: inline-block;
+
 }
 .nav-footer > li {
   list-style: none;
@@ -21,21 +22,19 @@
 .logo-copyright-container{
   width: 255px;
 }
+
 .footer-casium-logo {
-  background-color: rgba(255, 255, 255, 0);
-  width: 226px;
-  position: relative;
-  top: -48px;
-  left: -70px;
+  width: 80px;
 }
 .copyright-container{
   width: 255px;
+  clear:left;
 }
 .copyright-ai{
-  margin: -54px 0 0 10px;
+  margin-top:20px;
 }
 .code-license{
-  margin: -3px 0 0 10px;
+
 }
 .contact {
   text-align: center;
