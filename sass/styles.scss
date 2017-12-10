@@ -28,6 +28,23 @@ section {
   margin: 50px 25% 50px 150px;
   line-height: 1.6em
 }
+
+@media all and ( max-width: 800px ) and ( min-width: 600px ){
+  #intro{
+    margin: 50px 15% 50px 100px;
+  }
+}
+@media all and ( max-width: 600px ) and ( min-width: 500px ){
+  #intro{
+    margin: 50px 10% 50px 60px;
+  }
+}
+@media all and ( max-width: 500px ){
+  #intro{
+    margin: 50px 5% 50px 30px;
+  }
+}
+
 #intro p:first-child:first-letter {
   float: left;
     font-size: 3.6em;
@@ -36,6 +53,7 @@ section {
     padding-right: 8px;
     padding-left: 0px;
 }
+
 
 
 .button {
@@ -173,6 +191,7 @@ section {
 }
 .advantage-text {
   font-size: 16px;
+  max-width: 510px;
 }
 .advantage-link:hover {
   color: $theme-color-3;
